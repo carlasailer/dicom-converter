@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/workspace/dicom-converter/src/dicom.cpp
+dicom.h
+/home/workspace/dicom-converter/src/dicom.h
+
+/home/workspace/dicom-converter/src/dicom.h
+string
+-
+
+/home/workspace/dicom-converter/src/main.cpp
+iostream
+-
+dicom.h
+/home/workspace/dicom-converter/src/dicom.h
+
