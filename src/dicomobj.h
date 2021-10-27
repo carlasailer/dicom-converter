@@ -1,9 +1,9 @@
-#ifndef DICOM_H
-#define DICOM_H
+#ifndef DICOMOBJ_H
+#define DICOMOBJ_H
 
 #include <string>
 
-class Dicom
+class DicomObj
 {
     public:
     // image data;

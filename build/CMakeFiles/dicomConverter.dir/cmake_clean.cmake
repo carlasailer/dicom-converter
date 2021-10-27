@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dicomConverter.dir/src/main.cpp.o"
-  "CMakeFiles/dicomConverter.dir/src/dicom.cpp.o"
+  "CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o"
+  "CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o"
   "dicomConverter.pdb"
   "dicomConverter"
 )

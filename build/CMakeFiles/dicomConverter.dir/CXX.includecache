@@ -6,17 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/workspace/dicom-converter/src/dicom.cpp
-dicom.h
-/home/workspace/dicom-converter/src/dicom.h
-
-/home/workspace/dicom-converter/src/dicom.h
+/home/workspace/dicom-converter/src/dicomobj.h
 string
 -
 
-/home/workspace/dicom-converter/src/main.cpp
+/home/workspace/dicom-converter/src/dicomreader.cpp
+dirent.h
+-
+unistd.h
+-
 iostream
 -
-dicom.h
-/home/workspace/dicom-converter/src/dicom.h
+fstream
+-
+string
+-
+memory
+-
+dcmtk/dcmimgle/dcmimage.h
+/home/workspace/dicom-converter/src/dcmtk/dcmimgle/dcmimage.h
+dicomreader.h
+/home/workspace/dicom-converter/src/dicomreader.h
+dicomobj.h
+/home/workspace/dicom-converter/src/dicomobj.h
+
+/home/workspace/dicom-converter/src/dicomreader.h
+string
+-
+memory
+-
+dicomobj.h
+/home/workspace/dicom-converter/src/dicomobj.h
 

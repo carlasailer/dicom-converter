@@ -123,32 +123,59 @@ dicomConverter/fast:
 	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/build
 .PHONY : dicomConverter/fast
 
-src/dicom.o: src/dicom.cpp.o
+src/dicomobj.o: src/dicomobj.cpp.o
 
-.PHONY : src/dicom.o
+.PHONY : src/dicomobj.o
 
 # target to build an object file
-src/dicom.cpp.o:
-	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicom.cpp.o
-.PHONY : src/dicom.cpp.o
+src/dicomobj.cpp.o:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o
+.PHONY : src/dicomobj.cpp.o
 
-src/dicom.i: src/dicom.cpp.i
+src/dicomobj.i: src/dicomobj.cpp.i
 
-.PHONY : src/dicom.i
+.PHONY : src/dicomobj.i
 
 # target to preprocess a source file
-src/dicom.cpp.i:
-	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicom.cpp.i
-.PHONY : src/dicom.cpp.i
+src/dicomobj.cpp.i:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.i
+.PHONY : src/dicomobj.cpp.i
 
-src/dicom.s: src/dicom.cpp.s
+src/dicomobj.s: src/dicomobj.cpp.s
 
-.PHONY : src/dicom.s
+.PHONY : src/dicomobj.s
 
 # target to generate assembly for a file
-src/dicom.cpp.s:
-	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicom.cpp.s
-.PHONY : src/dicom.cpp.s
+src/dicomobj.cpp.s:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.s
+.PHONY : src/dicomobj.cpp.s
+
+src/dicomreader.o: src/dicomreader.cpp.o
+
+.PHONY : src/dicomreader.o
+
+# target to build an object file
+src/dicomreader.cpp.o:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o
+.PHONY : src/dicomreader.cpp.o
+
+src/dicomreader.i: src/dicomreader.cpp.i
+
+.PHONY : src/dicomreader.i
+
+# target to preprocess a source file
+src/dicomreader.cpp.i:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.i
+.PHONY : src/dicomreader.cpp.i
+
+src/dicomreader.s: src/dicomreader.cpp.s
+
+.PHONY : src/dicomreader.s
+
+# target to generate assembly for a file
+src/dicomreader.cpp.s:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.s
+.PHONY : src/dicomreader.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -186,9 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... dicomConverter"
 	@echo "... edit_cache"
-	@echo "... src/dicom.o"
-	@echo "... src/dicom.i"
-	@echo "... src/dicom.s"
+	@echo "... src/dicomobj.o"
+	@echo "... src/dicomobj.i"
+	@echo "... src/dicomobj.s"
+	@echo "... src/dicomreader.o"
+	@echo "... src/dicomreader.i"
+	@echo "... src/dicomreader.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

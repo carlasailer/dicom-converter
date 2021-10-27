@@ -15,9 +15,13 @@ This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree P
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 
+## Install Dicom Toolkit 
+* Linux:  sudo apt-get install -y dcmtk
+
 ## Basic Build Instructions
 
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./HelloWorld`.
+
