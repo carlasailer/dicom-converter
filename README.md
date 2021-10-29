@@ -1,9 +1,14 @@
-# CPPND: Capstone Hello World Repo
+# dicomConverter - a simple dicomConverter that lets you view your favourite medical images! 
+Have a look at the features included:
+* Read a DICOM file 
+* Display image meta information such as patient name
+* Export image as .png
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
+Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
 
 ## Dependencies for Running Locally
+
 * cmake >= 3.7
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
 * make >= 4.1 (Linux, Mac), 3.81 (Windows)
@@ -14,14 +19,20 @@ This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree P
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
+*dcmtk == 3.6.6
+  * See build instructions below if not already installed
 
-## Install Dicom Toolkit 
-* Linux:  `sudo apt-get install -y dcmtk`
+## Build DCMTIK - DICOM Toolkit 
+1. Download `dcmtk` from  [DCMTK - DICOM Toolkit](https://dicom.offis.de/dcmtk.php.en)
+2. Build `dcmtk` in your workspace folder 
+* `mkdir dcmtk-3.6.6-build`
+* `cd dcmtk-3.6.6-build`
+* `cmake ..`
+*`make DESTDIR=../dcmtk-3.6.6-install install`
 
-## Basic Build Instructions
-
+## Build this project
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./HelloWorld`.
+4. Run it: `./dicomConverter`.
 
