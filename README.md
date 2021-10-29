@@ -16,7 +16,7 @@ This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree P
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 
 ## Install Dicom Toolkit 
-* Linux:  sudo apt-get install -y dcmtk
+* Linux:  `sudo apt-get install -y dcmtk`
 
 ## Basic Build Instructions
 
