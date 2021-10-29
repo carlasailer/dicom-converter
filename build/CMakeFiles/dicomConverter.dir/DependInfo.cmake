@@ -12,8 +12,29 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/SDL2"
-  "../src"
+  "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/config/include"
+  "/home/workspace/dcmtk-3.6.6/ofstd/include"
+  "/home/workspace/dcmtk-3.6.6/oflog/include"
+  "/home/workspace/dcmtk-3.6.6/dcmdata/include"
+  "/home/workspace/dcmtk-3.6.6/dcmimgle/include"
+  "/home/workspace/dcmtk-3.6.6/dcmimage/include"
+  "/home/workspace/dcmtk-3.6.6/dcmjpeg/include"
+  "/home/workspace/dcmtk-3.6.6/dcmjpls/include"
+  "/home/workspace/dcmtk-3.6.6/dcmtls/include"
+  "/home/workspace/dcmtk-3.6.6/dcmnet/include"
+  "/home/workspace/dcmtk-3.6.6/dcmsr/include"
+  "/home/workspace/dcmtk-3.6.6/dcmsign/include"
+  "/home/workspace/dcmtk-3.6.6/dcmwlm/include"
+  "/home/workspace/dcmtk-3.6.6/dcmqrdb/include"
+  "/home/workspace/dcmtk-3.6.6/dcmpstat/include"
+  "/home/workspace/dcmtk-3.6.6/dcmrt/include"
+  "/home/workspace/dcmtk-3.6.6/dcmiod/include"
+  "/home/workspace/dcmtk-3.6.6/dcmfg/include"
+  "/home/workspace/dcmtk-3.6.6/dcmseg/include"
+  "/home/workspace/dcmtk-3.6.6/dcmtract/include"
+  "/home/workspace/dcmtk-3.6.6/dcmpmap/include"
+  "/home/workspace/dcmtk-3.6.6/dcmect/include"
+  "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include"
   )
 
 # Targets to which this target links.

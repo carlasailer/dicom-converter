@@ -60,41 +60,41 @@ include CMakeFiles/dicomConverter.dir/flags.make
 CMakeFiles/dicomConverter.dir/src/main.cpp.o: CMakeFiles/dicomConverter.dir/flags.make
 CMakeFiles/dicomConverter.dir/src/main.cpp.o: ../src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/workspace/dicom-converter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dicomConverter.dir/src/main.cpp.o"
-	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dicomConverter.dir/src/main.cpp.o -c /home/workspace/dicom-converter/src/main.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dicomConverter.dir/src/main.cpp.o -c /home/workspace/dicom-converter/src/main.cpp
 
 CMakeFiles/dicomConverter.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dicomConverter.dir/src/main.cpp.i"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/dicom-converter/src/main.cpp > CMakeFiles/dicomConverter.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/dicom-converter/src/main.cpp > CMakeFiles/dicomConverter.dir/src/main.cpp.i
 
 CMakeFiles/dicomConverter.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dicomConverter.dir/src/main.cpp.s"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/dicom-converter/src/main.cpp -o CMakeFiles/dicomConverter.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/dicom-converter/src/main.cpp -o CMakeFiles/dicomConverter.dir/src/main.cpp.s
 
 CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o: CMakeFiles/dicomConverter.dir/flags.make
 CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o: ../src/dicomobj.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/workspace/dicom-converter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o"
-	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o -c /home/workspace/dicom-converter/src/dicomobj.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o -c /home/workspace/dicom-converter/src/dicomobj.cpp
 
 CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.i"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/dicom-converter/src/dicomobj.cpp > CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/dicom-converter/src/dicomobj.cpp > CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.i
 
 CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.s"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/dicom-converter/src/dicomobj.cpp -o CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/dicom-converter/src/dicomobj.cpp -o CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.s
 
 CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o: CMakeFiles/dicomConverter.dir/flags.make
 CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o: ../src/dicomreader.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/workspace/dicom-converter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o"
-	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o -c /home/workspace/dicom-converter/src/dicomreader.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o -c /home/workspace/dicom-converter/src/dicomreader.cpp
 
 CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.i"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/dicom-converter/src/dicomreader.cpp > CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/workspace/dicom-converter/src/dicomreader.cpp > CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.i
 
 CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.s"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/dicom-converter/src/dicomreader.cpp -o CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/workspace/dicom-converter/src/dicomreader.cpp -o CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.s
 
 # Object files for target dicomConverter
 dicomConverter_OBJECTS = \
@@ -109,6 +109,54 @@ dicomConverter: CMakeFiles/dicomConverter.dir/src/main.cpp.o
 dicomConverter: CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o
 dicomConverter: CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o
 dicomConverter: CMakeFiles/dicomConverter.dir/build.make
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libofstd.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/liboflog.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmdata.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libi2d.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmimgle.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmimage.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmjpeg.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libijg8.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libijg12.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libijg16.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmjpls.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmtkcharls.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmtls.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmnet.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmsr.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libcmr.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmdsig.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmwlm.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmqrdb.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmpstat.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmrt.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmiod.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmfg.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmseg.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmtract.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmpmap.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmect.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmtls.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmsr.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmimage.a
+dicomConverter: /usr/lib/x86_64-linux-gnu/libtiff.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libjpeg.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libpng.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libxml2.so
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmdsig.a
+dicomConverter: /usr/lib/x86_64-linux-gnu/libssl.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libcrypto.so
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmqrdb.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmnet.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmimgle.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmfg.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmiod.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmdata.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/liboflog.a
+dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libofstd.a
+dicomConverter: /usr/lib/x86_64-linux-gnu/libicuuc.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libicudata.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libz.so
 dicomConverter: CMakeFiles/dicomConverter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/workspace/dicom-converter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable dicomConverter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dicomConverter.dir/link.txt --verbose=$(VERBOSE)

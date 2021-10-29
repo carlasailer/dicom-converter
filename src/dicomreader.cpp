@@ -5,18 +5,24 @@
 #include <string>
 #include <memory>
 
-//#include "dcmtk/dcmimgle/dcmimage.h"
+//#include "dcmdata/dctk.h"
+#include "dcmtk/dcmdata/dctk.h"
+#include "dcmtk/dcmimgle/dcmimage.h"
 #include "dicomreader.h"
 #include "dicomobj.h"
 
 std::unique_ptr<DicomObj> DicomReader::readFile() 
 {
     std::cout << _filepath << std::endl;
-    std::ifstream stream(_filepath);
-    if (stream.is_open()) 
-    {
-        std::cout << _filepath << std::endl;
-    }
+
+   DcmFileFormat fileformat;
+   OFCondition status = fileformat.loadFile(_filepath.c_str());
+
+   DcmDataset* dataset = fileformat.getDataset();
+   
+   OFString patient_name;
+   
+
 
     return nullptr;
    
