@@ -6,12 +6,12 @@
 #include "dicomreader.h"
 
 int main() {
-    //std::cout << "Hello World!" << "\n";
+   
     //DicomReader dicomReader = DicomReader(std::filesystem::current_path() + "/data/mrbrain.zip");
-    DicomReader dicomReader = DicomReader("home/workspace/dicom-converter/data/MRBRAIN.DCM");
-    
-    std::unique_ptr<DicomObj> dicomObj;
-    dicomObj = dicomReader.readFile(); 
+    //DicomReader dicomReader = DicomReader("home/workspace/dicom-converter/data/MRBRAIN.DCM");
+
+    DicomReader dicomReader = DicomReader("home/workspace/dicom-converter/data/CT.dcm");
+    //std::unique_ptr<DicomObj> dicomObj;
     
     
     return 0;

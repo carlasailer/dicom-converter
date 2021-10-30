@@ -740,6 +740,18 @@ dcmtk/dcmimgle/dibaslut.h
 dcmtk/dcmimgle/diobjcou.h
 /home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dcmtk/dcmimgle/diobjcou.h
 
+/home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dimo1img.h
+dcmtk/config/osconfig.h
+/home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dcmtk/config/osconfig.h
+dcmtk/dcmimgle/dimoimg.h
+/home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dcmtk/dcmimgle/dimoimg.h
+
+/home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dimo2img.h
+dcmtk/config/osconfig.h
+/home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dcmtk/config/osconfig.h
+dcmtk/dcmimgle/dimoimg.h
+/home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dcmtk/dcmimgle/dimoimg.h
+
 /home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dimoimg.h
 dcmtk/config/osconfig.h
 /home/workspace/dcmtk-3.6.6/dcmimgle/include/dcmtk/dcmimgle/dcmtk/config/osconfig.h
@@ -1444,6 +1456,10 @@ dcmtk/ofstd/oftypes.h
 
 /home/workspace/dcmtk-3.6.6/ofstd/include/dcmtk/ofstd/variadic/tuplefwd.h
 
+/home/workspace/dicom-converter/src/dicomobj.cpp
+dicomobj.h
+/home/workspace/dicom-converter/src/dicomobj.h
+
 /home/workspace/dicom-converter/src/dicomobj.h
 string
 -
@@ -1461,10 +1477,6 @@ string
 -
 memory
 -
-dcmtk/dcmdata/dctk.h
-/home/workspace/dicom-converter/src/dcmtk/dcmdata/dctk.h
-dcmtk/dcmimgle/dcmimage.h
-/home/workspace/dicom-converter/src/dcmtk/dcmimgle/dcmimage.h
 dicomreader.h
 /home/workspace/dicom-converter/src/dicomreader.h
 dicomobj.h
@@ -1475,6 +1487,28 @@ string
 -
 memory
 -
+dcmtk/dcmdata/dctk.h
+/home/workspace/dicom-converter/src/dcmtk/dcmdata/dctk.h
+dcmtk/dcmimgle/dcmimage.h
+/home/workspace/dicom-converter/src/dcmtk/dcmimgle/dcmimage.h
+dcmtk/dcmimgle/dipixel.h
+/home/workspace/dicom-converter/src/dcmtk/dcmimgle/dipixel.h
+dcmtk/dcmimgle/diimage.h
+/home/workspace/dicom-converter/src/dcmtk/dcmimgle/diimage.h
+dcmtk/dcmimgle/dimo1img.h
+/home/workspace/dicom-converter/src/dcmtk/dcmimgle/dimo1img.h
+dcmtk/dcmimgle/dimo2img.h
+/home/workspace/dicom-converter/src/dcmtk/dcmimgle/dimo2img.h
 dicomobj.h
 /home/workspace/dicom-converter/src/dicomobj.h
+
+/home/workspace/dicom-converter/src/main.cpp
+iostream
+-
+memory
+-
+dicomobj.h
+/home/workspace/dicom-converter/src/dicomobj.h
+dicomreader.h
+/home/workspace/dicom-converter/src/dicomreader.h
 

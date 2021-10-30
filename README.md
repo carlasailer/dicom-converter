@@ -19,16 +19,26 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
-*dcmtk == 3.6.6
+* dcmtk == 3.6.6
   * See build instructions below if not already installed
 
 ## Build DCMTIK - DICOM Toolkit 
 1. Download `dcmtk` from  [DCMTK - DICOM Toolkit](https://dicom.offis.de/dcmtk.php.en)
-2. Build `dcmtk` in your workspace folder 
+
+2. Extract the files to your workspace folder
+
+3. Build `dcmtk` in your workspace folder 
 * `mkdir dcmtk-3.6.6-build`
 * `cd dcmtk-3.6.6-build`
 * `cmake ..`
-*`make DESTDIR=../dcmtk-3.6.6-install install`
+* `make DESTDIR=../dcmtk-3.6.6-install install`
+
+3. Alternatively, use the install script:
+* Open a bash terminal
+* `chmod +x /home/workspace/dicom-converter/install-dcmtk.sh`
+* `./home/workspcae/dicom-converter/install-dcmtk.sh`
+
+4. Ensure that the DCMDICTPATH environment variable is set correctly (points to ".../dcmdata/data/dicom.dic" file). 
 
 ## Build this project
 1. Clone this repo.

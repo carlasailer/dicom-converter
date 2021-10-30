@@ -34,7 +34,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/workspace/dcmtk-3.6.6/dcmtract/include"
   "/home/workspace/dcmtk-3.6.6/dcmpmap/include"
   "/home/workspace/dcmtk-3.6.6/dcmect/include"
-  "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include"
+  "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include/**"
   )
 
 # Targets to which this target links.
