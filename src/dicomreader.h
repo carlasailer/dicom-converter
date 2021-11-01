@@ -13,8 +13,7 @@
 
 namespace DicomReader 
 {
-    std::unique_ptr<DicomImage> loadImage(const char* file);
-    void loadFile(const char* file);
+    Uint8* getPixelData(const char* file);
     OFString extractDcmTag(const char* file, DcmTagKey DICOMTag);
     template<typename TargetType> TargetType extractDcmTag(const char* file, DcmTagKey DICOMTag);
 

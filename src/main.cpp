@@ -4,6 +4,7 @@
 
 #include "dicomobject.h"
 #include "renderer.h"
+#include "controller.h"
 
 int main() {
 
@@ -14,15 +15,17 @@ int main() {
     constexpr std::size_t kGridWidth{32};
     constexpr std::size_t kGridHeight{32};
 
-    Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
     
-    std::string file = "/home/workspace/dicom-converter/data/MRBRAIN.DCM";
+    Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
+    Controller controller;
+
+    //std::string file = "/home/workspace/dicom-converter/data/MRBRAIN.DCM";
+    std::string file = "/home/workspace/dicom-converter/data/CT.dcm";
     DicomObject dicomObj = DicomObject(file);
     
-    //dicomObj.renderImage(renderer, kMsPerFrame);
+    dicomObj.renderImage(controller, renderer, kMsPerFrame);
     //dicomObj.addMetaData();
-   
-    
-    
+
+    std::cout << "DICOM Converter was closed." << std::endl;
     return 0;
 }

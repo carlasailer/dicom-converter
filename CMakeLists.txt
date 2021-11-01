@@ -26,6 +26,6 @@ INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS} src)
 INCLUDE_DIRECTORIES("/usr/include/SDL2/**")
 
 # declare executable and link required libraries
-ADD_EXECUTABLE(dicomConverter src/main.cpp src/dicomobject.cpp src/dicomreader.cpp src/renderer.cpp)
+ADD_EXECUTABLE(dicomConverter src/main.cpp src/dicomobject.cpp src/dicomreader.cpp src/renderer.cpp src/controller.cpp)
 string(STRIP ${SDL2_LIBRARIES} SDL2_LIBRARIES)
 TARGET_LINK_LIBRARIES(dicomConverter ${DCMTK_LIBRARIES} ${SDL2_LIBRARIES})

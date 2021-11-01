@@ -11,7 +11,7 @@ class Renderer
              const std::size_t grid_width, const std::size_t grid_height);
     ~Renderer();
 
-    void Render();
+    void Render(Uint8* image);
 
  private:
     SDL_Window *sdl_window;

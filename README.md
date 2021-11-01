@@ -21,8 +21,12 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 * dcmtk == 3.6.6
   * See build instructions below if not already installed
+* SDL2 >= 2.0
+  * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
+  >Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source. 
 
 ## Build DCMTIK - DICOM Toolkit 
+
 1. Download `dcmtk` from  [DCMTK - DICOM Toolkit](https://dicom.offis.de/dcmtk.php.en)
 
 2. Extract the files to your workspace folder
@@ -41,6 +45,7 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
 4. Ensure that the DCMDICTPATH environment variable is set correctly (points to ".../dcmdata/data/dicom.dic" file). 
 
 ## Build this project
+
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`

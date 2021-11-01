@@ -123,6 +123,33 @@ dicomConverter/fast:
 	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/build
 .PHONY : dicomConverter/fast
 
+src/controller.o: src/controller.cpp.o
+
+.PHONY : src/controller.o
+
+# target to build an object file
+src/controller.cpp.o:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/controller.cpp.o
+.PHONY : src/controller.cpp.o
+
+src/controller.i: src/controller.cpp.i
+
+.PHONY : src/controller.i
+
+# target to preprocess a source file
+src/controller.cpp.i:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/controller.cpp.i
+.PHONY : src/controller.cpp.i
+
+src/controller.s: src/controller.cpp.s
+
+.PHONY : src/controller.s
+
+# target to generate assembly for a file
+src/controller.cpp.s:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/controller.cpp.s
+.PHONY : src/controller.cpp.s
+
 src/dicomobject.o: src/dicomobject.cpp.o
 
 .PHONY : src/dicomobject.o
@@ -240,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... dicomConverter"
 	@echo "... edit_cache"
+	@echo "... src/controller.o"
+	@echo "... src/controller.i"
+	@echo "... src/controller.s"
 	@echo "... src/dicomobject.o"
 	@echo "... src/dicomobject.i"
 	@echo "... src/dicomobject.s"

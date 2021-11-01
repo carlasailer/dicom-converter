@@ -40,14 +40,21 @@ Renderer::~Renderer() {
   SDL_Quit();
 }
 
-void Renderer::Render() {
+void Renderer::Render(Uint8 * image) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
 
+  /*SDL_Texture* texture = SDL_CreateTexture(sdl_renderer, SDL_PIXELFORMAT_INDEX8, SDL_TEXTUREACCESS_STREAMING, 1024, 1024);
+  int pitch;
+  SDL_LockTexture(texture, NULL, (void**)&image, &pitch);
+  */
+
+
   // Clear screen
   SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
   SDL_RenderClear(sdl_renderer);
+
 
     // Update Screen
   SDL_RenderPresent(sdl_renderer);

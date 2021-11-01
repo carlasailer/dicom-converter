@@ -7,7 +7,7 @@
 
 #include "dicomreader.h"
 
-std::unique_ptr<DicomImage> DicomReader::loadImage(const char* file) 
+Uint8* DicomReader::getPixelData(const char* file) 
 {
     // unique pointer to image 
     auto image = std::make_unique<DicomImage>(file);
@@ -19,7 +19,14 @@ std::unique_ptr<DicomImage> DicomReader::loadImage(const char* file)
         if (image->isMonochrome())
         {
           std::cout << "Load image complete. " << std::endl;
-          return image;
+          
+          // get pixel data 
+          image->setMinMaxWindow();
+          Uint8 *pixelData = (Uint8 *) image->getOutputData(8 /*bits*/);
+          if (pixelData != NULL) 
+          {
+            return pixelData;
+          }
         }
       }
     }
