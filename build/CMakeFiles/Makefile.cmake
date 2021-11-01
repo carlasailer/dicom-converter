@@ -15,6 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.13.0-rc2/CMakeSystem.cmake"
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
+  "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake"
   "/usr/local/share/cmake-3.13/Modules/CMakeCCompiler.cmake.in"
   "/usr/local/share/cmake-3.13/Modules/CMakeCCompilerABI.c"
   "/usr/local/share/cmake-3.13/Modules/CMakeCInformation.cmake"

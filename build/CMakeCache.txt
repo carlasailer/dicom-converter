@@ -203,6 +203,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Directory where DCMTK library is installed.
 DCMTK_DIRECTORY:PATH=/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
+
 //Value Computed by CMake
 dicomConverter_BINARY_DIR:STATIC=/home/workspace/dicom-converter/build
 

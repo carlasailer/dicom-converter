@@ -7,34 +7,12 @@
 
 #include "dicomreader.h"
 
-//constructor for class DicomReader
-DicomReader::DicomReader() 
-{ 
-        
-}
-
-DcmDataset* DicomReader::loadFile(const char* file) 
+std::unique_ptr<DicomImage> DicomReader::loadImage(const char* file) 
 {
-  std::cout << file << std::endl;
-  DcmFileFormat fileformat;
-  OFCondition status = fileformat.loadFile(file);
-  if (status.good())
-  {
-    std::cout << "Load file: " << file << std::endl;
-    return fileformat.getDataset();
-  }
-  else
-  { 
-    std::cerr << "Error: cannot read DICOM file (" << status.text() << ")" << std::endl;
-    return nullptr;
-  }
-}
- 
+    // unique pointer to image 
+    auto image = std::make_unique<DicomImage>(file);
 
-DicomImage* DicomReader::loadImage(const char* file) 
-{
-    DicomImage *image = new DicomImage(file);
-    if (image != NULL)
+    if (image != nullptr)
     {
       if (image->getStatus() == EIS_Normal)
       {  
@@ -45,6 +23,7 @@ DicomImage* DicomReader::loadImage(const char* file)
         }
       }
     }
+
     else
     {
       std::cerr << "Error: cannot load DICOM image (" << DicomImage::getString(image->getStatus()) << ")" << std::endl;
@@ -52,17 +31,37 @@ DicomImage* DicomReader::loadImage(const char* file)
     }
 }
 
-void DicomReader::extractPatientName()
-{
-    /*OFCondition condition;
-    OFString patient_name;
-    std::cout << "start of patientname" << std::endl;
-
-    if (_dataset->findAndGetOFString(DCM_PatientName, patient_name).good())
+template<typename TargetType> TargetType DicomReader::extractDcmTag(const char* file, DcmTagKey DICOMTag) 
+{   
+  TargetType target;
+  DcmFileFormat fileformat;
+  OFCondition status = fileformat.loadFile(file);
+    
+  if (status.good())
+  {
+    if (fileformat.getDataset()->findAndGetOFString(DICOMTag,target).good()) 
     {
-      std::cout << "Name of this patient: " << patient_name << std::endl;
+        std::cout << "Extracted " << DICOMTag << " : " << target << std::endl;
     }
-    // extract Patient Name from dataset using the DCMTagKey DCM_PatientName
-    */
-    return;
+  }
+  
+  return target;
+}
+
+
+OFString DicomReader::extractDcmTag(const char* file, DcmTagKey DICOMTag) 
+{
+  OFString target;
+  DcmFileFormat fileformat;
+  OFCondition status = fileformat.loadFile(file);
+    
+  if (status.good())
+  {
+    if (fileformat.getDataset()->findAndGetOFString(DICOMTag,target).good()) 
+    {
+        std::cout << "Extracted " << DICOMTag << " : " << target << std::endl;
+    }
+  }
+  
+  return target;
 }

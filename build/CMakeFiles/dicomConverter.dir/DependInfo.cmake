@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/workspace/dicom-converter/src/dicomobject.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/dicomobject.cpp.o"
   "/home/workspace/dicom-converter/src/dicomreader.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o"
   "/home/workspace/dicom-converter/src/main.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/main.cpp.o"
+  "/home/workspace/dicom-converter/src/renderer.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/renderer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -35,6 +36,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/workspace/dcmtk-3.6.6/dcmpmap/include"
   "/home/workspace/dcmtk-3.6.6/dcmect/include"
   "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include/**"
+  "/usr/include/SDL2"
+  "../src"
+  "/usr/include/SDL2/**"
   )
 
 # Targets to which this target links.

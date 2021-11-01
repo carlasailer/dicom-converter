@@ -1,7 +1,7 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 
 class Renderer 
 {
@@ -12,7 +12,6 @@ class Renderer
     ~Renderer();
 
     void Render();
-    void UpdateWindowTitle();
 
  private:
     SDL_Window *sdl_window;

@@ -143,6 +143,7 @@ CMakeFiles/dicomConverter.dir/src/dicomobject.cpp.o
  /home/workspace/dicom-converter/src/dicomobject.cpp
  /home/workspace/dicom-converter/src/dicomobject.h
  /home/workspace/dicom-converter/src/dicomreader.h
+ /home/workspace/dicom-converter/src/renderer.h
 CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o
  /home/workspace/dcmtk-3.6.6/dcmdata/include/dcmtk/dcmdata/cmdlnarg.h
  /home/workspace/dcmtk-3.6.6/dcmdata/include/dcmtk/dcmdata/dcbytstr.h
@@ -426,3 +427,7 @@ CMakeFiles/dicomConverter.dir/src/main.cpp.o
  /home/workspace/dicom-converter/src/dicomobject.h
  /home/workspace/dicom-converter/src/dicomreader.h
  /home/workspace/dicom-converter/src/main.cpp
+ /home/workspace/dicom-converter/src/renderer.h
+CMakeFiles/dicomConverter.dir/src/renderer.cpp.o
+ /home/workspace/dicom-converter/src/renderer.cpp
+ /home/workspace/dicom-converter/src/renderer.h

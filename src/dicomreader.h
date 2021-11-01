@@ -11,17 +11,13 @@
 #include "dcmtk/dcmimgle/dimo1img.h"
 #include "dcmtk/dcmimgle/dimo2img.h"
 
-class DicomReader 
+namespace DicomReader 
 {
-public:
-    DicomReader(); 
-    DicomImage* loadImage(const char* file);
-    DcmDataset* loadFile(const char* file);
-    void extractPatientName();
+    std::unique_ptr<DicomImage> loadImage(const char* file);
+    void loadFile(const char* file);
+    OFString extractDcmTag(const char* file, DcmTagKey DICOMTag);
+    template<typename TargetType> TargetType extractDcmTag(const char* file, DcmTagKey DICOMTag);
 
-private:
-   
-
-};
+}; // namespace DICOMReader
 
 #endif

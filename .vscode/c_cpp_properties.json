@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/home/workspace/dcmtk-3.6.6/**",
-                "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include/dcmtk"
+                "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include/dcmtk",
+                "/usr/include/SDL2/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc-7",

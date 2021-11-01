@@ -1456,33 +1456,15 @@ dcmtk/ofstd/oftypes.h
 
 /home/workspace/dcmtk-3.6.6/ofstd/include/dcmtk/ofstd/variadic/tuplefwd.h
 
-/home/workspace/dicom-converter/src/dicomobject.cpp
-dicomobject.h
-/home/workspace/dicom-converter/src/dicomobject.h
-dicomreader.h
-/home/workspace/dicom-converter/src/dicomreader.h
-
 /home/workspace/dicom-converter/src/dicomobject.h
 string
 -
+dcmtk/dcmdata/dctk.h
+/home/workspace/dicom-converter/src/dcmtk/dcmdata/dctk.h
 dicomreader.h
 /home/workspace/dicom-converter/src/dicomreader.h
-
-/home/workspace/dicom-converter/src/dicomreader.cpp
-dirent.h
--
-unistd.h
--
-iostream
--
-fstream
--
-string
--
-memory
--
-dicomreader.h
-/home/workspace/dicom-converter/src/dicomreader.h
+renderer.h
+/home/workspace/dicom-converter/src/renderer.h
 
 /home/workspace/dicom-converter/src/dicomreader.h
 string
@@ -1511,4 +1493,10 @@ string
 -
 dicomobject.h
 /home/workspace/dicom-converter/src/dicomobject.h
+renderer.h
+/home/workspace/dicom-converter/src/renderer.h
+
+/home/workspace/dicom-converter/src/renderer.h
+SDL2/SDL.h
+-
 
