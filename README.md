@@ -1,5 +1,5 @@
 # dicomConverter - a simple dicomConverter that lets you view your favourite medical images! 
-The DICOM (Digital Imaging and Communications in Medicine) standard serves to save, send and retrieve medical image data in a standardized way. Use this DICOM converter to:
+The **DICOM (Digital Imaging and Communications in Medicine)** standard serves to save, send and retrieve medical image data in a standardized way. Use this DICOM converter to:
 * Read a DICOM file (.dcm)
 * Display image
 * Display meta information such as patient name, study data, or modality
@@ -20,7 +20,7 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
-* dcmtk == 3.6.6
+* dcmtk == 3.6.6 (DICOM Toolkit)
   * See build instructions below if not already installed
 * SDL2 >= 2.0
   * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
