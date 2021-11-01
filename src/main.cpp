@@ -1,17 +1,13 @@
 #include <iostream>
 #include <memory>
-//#include <filesystem>
+#include <string>
 
-#include "dicomobj.h"
-#include "dicomreader.h"
+#include "dicomobject.h"
 
 int main() {
-   
-    //DicomReader dicomReader = DicomReader(std::filesystem::current_path() + "/data/mrbrain.zip");
-    //DicomReader dicomReader = DicomReader("home/workspace/dicom-converter/data/MRBRAIN.DCM");
-
-    DicomReader dicomReader = DicomReader("home/workspace/dicom-converter/data/CT.dcm");
-    //std::unique_ptr<DicomObj> dicomObj;
+    std::string file = "/home/workspace/dicom-converter/data/CT.dcm";
+    DicomObject dicomObj = DicomObject(file);
+    
     
     
     return 0;

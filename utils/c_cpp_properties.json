@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/workspace/dcmtk-3.6.6/**",
+                "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include/dcmtk"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc-7",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

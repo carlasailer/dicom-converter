@@ -1456,13 +1456,17 @@ dcmtk/ofstd/oftypes.h
 
 /home/workspace/dcmtk-3.6.6/ofstd/include/dcmtk/ofstd/variadic/tuplefwd.h
 
-/home/workspace/dicom-converter/src/dicomobj.cpp
-dicomobj.h
-/home/workspace/dicom-converter/src/dicomobj.h
+/home/workspace/dicom-converter/src/dicomobject.cpp
+dicomobject.h
+/home/workspace/dicom-converter/src/dicomobject.h
+dicomreader.h
+/home/workspace/dicom-converter/src/dicomreader.h
 
-/home/workspace/dicom-converter/src/dicomobj.h
+/home/workspace/dicom-converter/src/dicomobject.h
 string
 -
+dicomreader.h
+/home/workspace/dicom-converter/src/dicomreader.h
 
 /home/workspace/dicom-converter/src/dicomreader.cpp
 dirent.h
@@ -1479,8 +1483,6 @@ memory
 -
 dicomreader.h
 /home/workspace/dicom-converter/src/dicomreader.h
-dicomobj.h
-/home/workspace/dicom-converter/src/dicomobj.h
 
 /home/workspace/dicom-converter/src/dicomreader.h
 string
@@ -1499,16 +1501,14 @@ dcmtk/dcmimgle/dimo1img.h
 /home/workspace/dicom-converter/src/dcmtk/dcmimgle/dimo1img.h
 dcmtk/dcmimgle/dimo2img.h
 /home/workspace/dicom-converter/src/dcmtk/dcmimgle/dimo2img.h
-dicomobj.h
-/home/workspace/dicom-converter/src/dicomobj.h
 
 /home/workspace/dicom-converter/src/main.cpp
 iostream
 -
 memory
 -
-dicomobj.h
-/home/workspace/dicom-converter/src/dicomobj.h
-dicomreader.h
-/home/workspace/dicom-converter/src/dicomreader.h
+string
+-
+dicomobject.h
+/home/workspace/dicom-converter/src/dicomobject.h
 

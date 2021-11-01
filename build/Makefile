@@ -123,32 +123,32 @@ dicomConverter/fast:
 	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/build
 .PHONY : dicomConverter/fast
 
-src/dicomobj.o: src/dicomobj.cpp.o
+src/dicomobject.o: src/dicomobject.cpp.o
 
-.PHONY : src/dicomobj.o
+.PHONY : src/dicomobject.o
 
 # target to build an object file
-src/dicomobj.cpp.o:
-	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.o
-.PHONY : src/dicomobj.cpp.o
+src/dicomobject.cpp.o:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobject.cpp.o
+.PHONY : src/dicomobject.cpp.o
 
-src/dicomobj.i: src/dicomobj.cpp.i
+src/dicomobject.i: src/dicomobject.cpp.i
 
-.PHONY : src/dicomobj.i
+.PHONY : src/dicomobject.i
 
 # target to preprocess a source file
-src/dicomobj.cpp.i:
-	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.i
-.PHONY : src/dicomobj.cpp.i
+src/dicomobject.cpp.i:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobject.cpp.i
+.PHONY : src/dicomobject.cpp.i
 
-src/dicomobj.s: src/dicomobj.cpp.s
+src/dicomobject.s: src/dicomobject.cpp.s
 
-.PHONY : src/dicomobj.s
+.PHONY : src/dicomobject.s
 
 # target to generate assembly for a file
-src/dicomobj.cpp.s:
-	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobj.cpp.s
-.PHONY : src/dicomobj.cpp.s
+src/dicomobject.cpp.s:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/dicomobject.cpp.s
+.PHONY : src/dicomobject.cpp.s
 
 src/dicomreader.o: src/dicomreader.cpp.o
 
@@ -213,9 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... dicomConverter"
 	@echo "... edit_cache"
-	@echo "... src/dicomobj.o"
-	@echo "... src/dicomobj.i"
-	@echo "... src/dicomobj.s"
+	@echo "... src/dicomobject.o"
+	@echo "... src/dicomobject.i"
+	@echo "... src/dicomobject.s"
 	@echo "... src/dicomreader.o"
 	@echo "... src/dicomreader.i"
 	@echo "... src/dicomreader.s"

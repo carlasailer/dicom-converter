@@ -22,5 +22,5 @@ INCLUDE(${DCMTK_DIR}/dcmtk-3.6.6-build/DCMTKConfig.cmake)
 INCLUDE_DIRECTORIES(${DCMTK_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES("/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install/usr/local/include/**")
 # declare executable and link required libraries
-ADD_EXECUTABLE(dicomConverter src/main.cpp src/dicomobj.cpp src/dicomreader.cpp)
+ADD_EXECUTABLE(dicomConverter src/main.cpp src/dicomobject.cpp src/dicomreader.cpp)
 TARGET_LINK_LIBRARIES(dicomConverter ${DCMTK_LIBRARIES})

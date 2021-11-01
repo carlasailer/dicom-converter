@@ -10,19 +10,17 @@
 #include "dcmtk/dcmimgle/diimage.h"
 #include "dcmtk/dcmimgle/dimo1img.h"
 #include "dcmtk/dcmimgle/dimo2img.h"
-#include "dicomobj.h"
 
 class DicomReader 
 {
 public:
-    DicomReader(std::string path); 
-    void getImage();
-    void loadFile();
+    DicomReader(); 
+    DicomImage* loadImage(const char* file);
+    DcmDataset* loadFile(const char* file);
     void extractPatientName();
 
 private:
-    OFString _filepath;
-    DicomImage* _image; 
+   
 
 };
 

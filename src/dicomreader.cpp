@@ -5,83 +5,64 @@
 #include <string>
 #include <memory>
 
-//#include "dcmdata/dctk.h"
-//#include "dcmtk/dcmdata/dctk.h"
-//#include "dcmtk/dcmimgle/dcmimage.h"
 #include "dicomreader.h"
-#include "dicomobj.h"
 
 //constructor for class DicomReader
-DicomReader::DicomReader(std::string path) : _filepath(path.c_str())
-{
-    loadFile();
-    getImage();
-    //extractPatientName();
-    
+DicomReader::DicomReader() 
+{ 
+        
 }
 
-void DicomReader::loadFile() 
+DcmDataset* DicomReader::loadFile(const char* file) 
 {
-  std::cout << _filepath << std::endl;
+  std::cout << file << std::endl;
   DcmFileFormat fileformat;
-  OFCondition status = fileformat.loadFile(_filepath);
-if (status.good())
-{
-  OFString patientName;
-  if (fileformat.getDataset()->findAndGetOFString(DCM_PatientName, patientName).good())
+  OFCondition status = fileformat.loadFile(file);
+  if (status.good())
   {
-    std::cout << "Patient's Name: " << patientName << std::endl;
-  } else
-    std::cerr << "Error: cannot access Patient's Name!" << std::endl;
-} else
-  std::cerr << "Error: cannot read DICOM file (" << status.text() << ")" << std::endl;
+    std::cout << "Load file: " << file << std::endl;
+    return fileformat.getDataset();
+  }
+  else
+  { 
+    std::cerr << "Error: cannot read DICOM file (" << status.text() << ")" << std::endl;
+    return nullptr;
+  }
 }
+ 
 
-void DicomReader::getImage() 
+DicomImage* DicomReader::loadImage(const char* file) 
 {
-    DicomImage *image = new DicomImage(_filepath.c_str());
+    DicomImage *image = new DicomImage(file);
     if (image != NULL)
     {
       if (image->getStatus() == EIS_Normal)
-      {
+      {  
         if (image->isMonochrome())
         {
-          image->setMinMaxWindow();
-          Uint8 *pixelData = (Uint8 *)(image->getOutputData(8 /* bits */));
-          if (pixelData != NULL)
-          {
-            /* do something useful with the pixel data */
-          }
+          std::cout << "Load image complete. " << std::endl;
+          return image;
         }
-      } else
-        std::cerr << "Error: cannot load DICOM image (" << DicomImage::getString(image->getStatus()) << ")" << std::endl;
+      }
     }
-
-    std::cout << "end of getdataset" << std::endl;
-    _image = image;
-    delete image;
-    return;   
+    else
+    {
+      std::cerr << "Error: cannot load DICOM image (" << DicomImage::getString(image->getStatus()) << ")" << std::endl;
+      return nullptr;
+    }
 }
 
 void DicomReader::extractPatientName()
 {
-    OFCondition condition;
+    /*OFCondition condition;
     OFString patient_name;
     std::cout << "start of patientname" << std::endl;
-    // extract Patient Name from dataset using the DCMTagKey DCM_PatientName
-    try 
-    { //condition = _dataset->findAndGetOFStringArray(DCM_PatientName, patient_name);
-    }
 
-    catch(const std::exception& e)
-    {std::cerr << "crash" << std::endl;}
-
-   /* if (condition.good())
+    if (_dataset->findAndGetOFString(DCM_PatientName, patient_name).good())
     {
-        std::cout << "Name of this patient: " << patient_name << std::endl;
+      std::cout << "Name of this patient: " << patient_name << std::endl;
     }
-*/
-    std::cout << "end of patientname" << std::endl;
-
+    // extract Patient Name from dataset using the DCMTagKey DCM_PatientName
+    */
     return;
 }
