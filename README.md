@@ -1,10 +1,12 @@
 # dicomConverter - a simple dicomConverter that lets you view your favourite medical images! 
-The **DICOM (Digital Imaging and Communications in Medicine)** standard serves to save, send and retrieve medical image data in a standardized way. Use this DICOM converter to:
+The **DICOM (Digital Imaging and Communications in Medicine)** standard 
+![image](utils/DICOMLogo.jpg)
+serves to save, send and retrieve medical image data in a standardized way. Use this DICOM converter to:
 * Read a DICOM file (.dcm)
 * Display image
 * Display meta information such as patient name, study data, or modality
 * Export image as .png
-
+![image](utils/output.png)
 Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
 
