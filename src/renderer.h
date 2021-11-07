@@ -5,6 +5,7 @@
 #include <SDL2/SDL_ttf.h>
 //#include <SDL2/SDL_image.h>
 #include <string>
+#include <vector>
 
 class Renderer 
 {
@@ -15,6 +16,7 @@ class Renderer
     ~Renderer();
 
     void Render(const void* image, int width, int height);
+    void RenderText(std::vector<std::string> text);
     void Save(std::string file_ext, std::string folder);
 
  private:

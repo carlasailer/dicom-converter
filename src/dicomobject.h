@@ -15,6 +15,7 @@ class DicomObject
     void renderImage(Controller &controller, Renderer &renderer, std::size_t target_frame_duration);
     void saveAs(std::string file_ext, std::string folder);
     std::string getFilenameWithTimestamp(std::string file_ext, std::string location);
+    std::vector<std::string> formatMetaData();
     //void addMetaData();
        
     private:

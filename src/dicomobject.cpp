@@ -6,7 +6,7 @@
 
 #include "dicomobject.h"
 #include "dicomreader.h"
-
+   
     
 DicomObject::DicomObject(std::string file) 
 {
@@ -41,13 +41,20 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
     Uint32 frame_duration;
     int frame_count = 0;
     bool running = true;
+    std::vector<std::string> text;
+
+    text = formatMetaData();
+    std::cout << text[0] << std::endl;
 
     while (running) {
         frame_start = SDL_GetTicks();
 
         // Input, Update, Render - the main game loop.
         controller.HandleInput(running);
+
+        renderer.RenderText(text);
         renderer.Render(_pixeldata, _imagewidth, _imageheight);
+
 
         frame_end = SDL_GetTicks();
 
@@ -63,14 +70,31 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
         if (frame_duration < target_frame_duration) {
         SDL_Delay(target_frame_duration - frame_duration);
 
-        SDL_Delay(1000);
+        SDL_Delay(10000);
         running = false;
       }
     
   }
  //TODO: uncomment and test
- // renderer.Save("png", "/home/workspace/dicom-converter/data/export");
+  //renderer.Save("png", "/home/workspace/dicom-converter/data/export");
   
+}
+
+std::vector<std::string> DicomObject::formatMetaData()
+{
+    std::vector<std::string> text;
+    std::string patient =  "Patient name:    ";
+    std::string modality = "Modality:           ";
+    std::string studydate = "Study date:        ";
+ 
+    patient.append(_patientName.c_str());
+    modality.append(_modality.c_str());
+    studydate.append(_studyDate.c_str());
+    text.emplace_back(patient);
+    text.emplace_back(modality);
+    text.emplace_back(studydate);
+
+    return text;
 }
 
 

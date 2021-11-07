@@ -26,7 +26,7 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
   * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
   >Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source. 
 * SDL_ttf
-  * On Linux, use `sudo apt-get install libsdl-ttf2.0-dev`
+  * On Linux, use `sudo apt-get install libsdl2-ttf-dev`
   
 ## Build DCMTIK - DICOM Toolkit 
 

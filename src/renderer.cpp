@@ -108,8 +108,8 @@ void Renderer::Render(const void* pixels, int width, int height) {
 
   // Render food
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  block.x = 10 * block.w;
-  block.y = 10 * block.h;
+  block.x = 2 * block.w;
+  block.y = 2 * block.h;
   SDL_RenderFillRect(sdl_renderer, &block);
   std::cout << "Before surface" << std::endl;
    //DL_Surface *sdl_imageSurface = SDL_CreateRGBSurface(0, width, height, 8, NULL, NULL, NULL, NULL);
@@ -147,20 +147,20 @@ void Renderer::Render(const void* pixels, int width, int height) {
   SDL_RenderCopy(sdl_renderer, sdl_texture, NULL, NULL);
    */
   // update what is seen
-  SDL_RenderClear(sdl_renderer);
+  //SDL_RenderClear(sdl_renderer);
 
   // render text
-  font = TTF_OpenFont("/home/workspace/dicom-converter/utils/arial.ttf", 20);
+  /*font = TTF_OpenFont("/home/workspace/dicom-converter/utils/arial.ttf", 20);
   
   if (!font) {
     std::cerr << "TTF_OpenFont failed: " << TTF_GetError();
   }
   
   SDL_Surface* surface_text;
-  SDL_Color color = {25, 0, 0};
+  SDL_Color color = {255, 0, 0};
 
   surface_text = TTF_RenderText_Solid(font, "Hello World!", color);
-  /*if (!surface_text) {
+  if (!surface_text) {
     std::cerr << "Failed to render text: " << TTF_GetError() << std::endl;
   }
 
@@ -172,10 +172,45 @@ void Renderer::Render(const void* pixels, int width, int height) {
   TTF_CloseFont(font);
   SDL_DestroyTexture(texture_text);
   SDL_FreeSurface(surface_text);
-*/
+
   SDL_RenderPresent(sdl_renderer);
+*/
+return;
 
+}
 
+void Renderer::RenderText(std::vector<std::string> text)
+{
+  SDL_Surface* surface_text;
+  SDL_Color color = {255, 255, 255};
+  SDL_Texture* texture_text;
+  
+
+  font = TTF_OpenFont("/home/workspace/dicom-converter/utils/arial.ttf", 13);
+  if (!font) {
+    std::cerr << "TTF_OpenFont failed: " << TTF_GetError();
+  }
+  
+  for (int i = 0; i < text.size(); i++) 
+  {
+    surface_text = TTF_RenderText_Solid(font, text[i].c_str(), color);
+    if (!surface_text) {
+      std::cerr << "Failed to render text: " << TTF_GetError() << std::endl;
+    }
+
+    SDL_Rect dest = {0, 15*i, surface_text->w, surface_text->h};
+    texture_text = SDL_CreateTextureFromSurface(sdl_renderer, surface_text);
+    SDL_RenderCopy(sdl_renderer, texture_text, NULL, &dest);
+    SDL_DestroyTexture(texture_text);
+    SDL_FreeSurface(surface_text);
+    SDL_RenderPresent(sdl_renderer);
+  }
+
+  TTF_CloseFont(font);
+  
+  //SDL_RenderPresent(sdl_renderer);
+
+  return;
 }
 
 void Renderer::Save(std::string file_ext, std::string folder)
