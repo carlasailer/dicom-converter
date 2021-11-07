@@ -4,12 +4,13 @@
 #include <fstream>
 #include <string>
 #include <memory>
+#include <typeinfo>
 
 #include "dicomreader.h"
 
-Uint8* DicomReader::getPixelData(const char* file) 
+std::unique_ptr<DicomImage> DicomReader::getDicomImage(const char* file)
 {
-    // unique pointer to image 
+ // unique pointer to image 
     auto image = std::make_unique<DicomImage>(file);
 
     if (image != nullptr)
@@ -19,14 +20,8 @@ Uint8* DicomReader::getPixelData(const char* file)
         if (image->isMonochrome())
         {
           std::cout << "Load image complete. " << std::endl;
+          return image;
           
-          // get pixel data 
-          image->setMinMaxWindow();
-          Uint8 *pixelData = (Uint8 *) image->getOutputData(8 /*bits*/);
-          if (pixelData != NULL) 
-          {
-            return pixelData;
-          }
         }
       }
     }
@@ -37,6 +32,24 @@ Uint8* DicomReader::getPixelData(const char* file)
       return nullptr;
     }
 }
+
+
+const void* DicomReader::getPixelData(DicomImage *image) 
+{ 
+  image->setMinMaxWindow();
+  std::cout << image->getOutputDataSize(8) << std::endl;
+  //Uint8 *pixelData = (Uint8 *) image->getOutputData(8 /*bits*/, 1);
+  const void *pixelData = image->getOutputData(8 /*bits*/, 1);
+  if (pixelData != NULL) 
+  {
+    std::cout << "Data: "<< pixelData << std::endl;
+    return pixelData;
+  }
+
+  else  { return nullptr; }
+}
+     
+
 
 template<typename TargetType> TargetType DicomReader::extractDcmTag(const char* file, DcmTagKey DICOMTag) 
 {   
@@ -72,3 +85,4 @@ OFString DicomReader::extractDcmTag(const char* file, DcmTagKey DICOMTag)
   
   return target;
 }
+

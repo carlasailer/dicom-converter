@@ -1,10 +1,19 @@
+#include <string>
+#include <iostream>
+#include <sstream>
+#include <chrono>
+#include <time.h>
+
 #include "dicomobject.h"
 #include "dicomreader.h"
 
+    
 DicomObject::DicomObject(std::string file) 
 {
-    _image = DicomReader::getPixelData(file.c_str());
-    //_patientName = DicomReader::extractDcmTag<OFString>(file.c_str(), DCM_PatientName);
+    _image = DicomReader::getDicomImage(file.c_str());
+    _imagewidth = _image->getWidth();
+    _imageheight = _image->getHeight();
+    _pixeldata = DicomReader::getPixelData(_image.get());
 
     // extract desired metadata 
     _patientName = DicomReader::extractDcmTag(file.c_str(), DCM_PatientName);
@@ -12,6 +21,15 @@ DicomObject::DicomObject(std::string file)
     _patientBirthDate = DicomReader::extractDcmTag(file.c_str(), DCM_PatientBirthDate);
     _modality = DicomReader::extractDcmTag(file.c_str(), DCM_Modality);
     _studyDate = DicomReader::extractDcmTag(file.c_str(), DCM_StudyDate);
+    OFString rd = DicomReader::extractDcmTag(file.c_str(), DCM_ColorSpace);
+    
+    //_imagewidth = std::atoi(DicomReader::extractDcmTag(file.c_str(), DCM_Rows).c_str());
+   // _imageheight = std::atoi(DicomReader::extractDcmTag(file.c_str(), DCM_Columns).c_str());
+
+    std::cout << "Width: " << _imagewidth << std::endl;
+    std::cout << "Height: " << _imageheight << std::endl;
+    std::cout << "Color space: " << rd << std::endl;
+    
 }
 
 
@@ -29,7 +47,7 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
 
         // Input, Update, Render - the main game loop.
         controller.HandleInput(running);
-        renderer.Render(_image);
+        renderer.Render(_pixeldata, _imagewidth, _imageheight);
 
         frame_end = SDL_GetTicks();
 
@@ -44,7 +62,17 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
         // achieve the correct frame rate.
         if (frame_duration < target_frame_duration) {
         SDL_Delay(target_frame_duration - frame_duration);
+
+        SDL_Delay(1000);
+        running = false;
       }
-  }
-}
     
+  }
+ //TODO: uncomment and test
+ // renderer.Save("png", "/home/workspace/dicom-converter/data/export");
+  
+}
+
+
+
+

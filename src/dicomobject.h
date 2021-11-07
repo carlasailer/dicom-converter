@@ -13,12 +13,14 @@ class DicomObject
     DicomObject(std::string file);
     void displayImage();
     void renderImage(Controller &controller, Renderer &renderer, std::size_t target_frame_duration);
-    
+    void saveAs(std::string file_ext, std::string folder);
+    std::string getFilenameWithTimestamp(std::string file_ext, std::string location);
     //void addMetaData();
        
     private:
     const char* _filepath;
-    Uint8* _image; 
+    const void* _pixeldata; 
+    std::unique_ptr<DicomImage> _image;
     
 
     // metadata
@@ -28,7 +30,8 @@ class DicomObject
     OFString _patientBirthDate;  // (0010,0030) --> DCM_PatientBirthDate
     OFString _modality{""};      //  (0008,0060) --> DCM_Modality
     OFString _studyDate{""};     //  (0008,0020) --> DCM_StudyDate  maybe turn into a date time object later
-
+    int _imagewidth;
+    int _imageheight;
    
 
 

@@ -2,6 +2,9 @@
 #define RENDERER_H
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+//#include <SDL2/SDL_image.h>
+#include <string>
 
 class Renderer 
 {
@@ -11,11 +14,15 @@ class Renderer
              const std::size_t grid_width, const std::size_t grid_height);
     ~Renderer();
 
-    void Render(Uint8* image);
+    void Render(const void* image, int width, int height);
+    void Save(std::string file_ext, std::string folder);
 
  private:
     SDL_Window *sdl_window;
     SDL_Renderer *sdl_renderer;
+    SDL_Surface *sdl_winSurface;
+    SDL_Texture *sdl_texture;
+    TTF_Font *font;
 
     const std::size_t screen_width;
     const std::size_t screen_height;

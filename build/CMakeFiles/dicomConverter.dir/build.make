@@ -166,6 +166,9 @@ dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmseg.a
 dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmtract.a
 dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmpmap.a
 dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmect.a
+dicomConverter: /usr/lib/x86_64-linux-gnu/libSDL2main.a
+dicomConverter: /usr/lib/x86_64-linux-gnu/libSDL2.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmtls.a
 dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmsr.a
 dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libdcmimage.a
@@ -187,6 +190,8 @@ dicomConverter: /home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-build/lib/libofstd.a
 dicomConverter: /usr/lib/x86_64-linux-gnu/libicuuc.so
 dicomConverter: /usr/lib/x86_64-linux-gnu/libicudata.so
 dicomConverter: /usr/lib/x86_64-linux-gnu/libz.so
+dicomConverter: /usr/lib/x86_64-linux-gnu/libSDL2main.a
+dicomConverter: /usr/lib/x86_64-linux-gnu/libSDL2.so
 dicomConverter: CMakeFiles/dicomConverter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/workspace/dicom-converter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable dicomConverter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dicomConverter.dir/link.txt --verbose=$(VERBOSE)
