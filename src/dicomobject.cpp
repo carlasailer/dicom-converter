@@ -82,8 +82,10 @@ std::vector<std::string> DicomObject::formatMetaData()
 {
     std::vector<std::string> text;
     std::string patient =  "Patient name:    ";
-    std::string modality = "Modality:           ";
+    std::string modality = "Modality:            ";
     std::string studydate = "Study date:        ";
+
+    _studyDate = _studyDate.substr(6,2) + "." + _studyDate.substr(4,2) + "." + _studyDate.substr(0,4); 
  
     patient.append(_patientName.c_str());
     modality.append(_modality.c_str());
@@ -92,7 +94,7 @@ std::vector<std::string> DicomObject::formatMetaData()
     text.emplace_back(modality);
     text.emplace_back(studydate);
 
-    std::cout << patient << std::endl;
+    std::cout << _studyDate << std::endl;
 
     return text;
 }

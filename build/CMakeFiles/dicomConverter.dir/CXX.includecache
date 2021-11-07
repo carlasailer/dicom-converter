@@ -1504,20 +1504,6 @@ dcmtk/dcmimgle/dimo1img.h
 dcmtk/dcmimgle/dimo2img.h
 /home/workspace/dicom-converter/src/dcmtk/dcmimgle/dimo2img.h
 
-/home/workspace/dicom-converter/src/main.cpp
-iostream
--
-memory
--
-string
--
-dicomobject.h
-/home/workspace/dicom-converter/src/dicomobject.h
-renderer.h
-/home/workspace/dicom-converter/src/renderer.h
-controller.h
-/home/workspace/dicom-converter/src/controller.h
-
 /home/workspace/dicom-converter/src/renderer.h
 SDL2/SDL.h
 -
