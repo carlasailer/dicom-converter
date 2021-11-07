@@ -22,13 +22,11 @@ DicomObject::DicomObject(std::string file)
     _modality = DicomReader::extractDcmTag(file.c_str(), DCM_Modality);
     _studyDate = DicomReader::extractDcmTag(file.c_str(), DCM_StudyDate);
     OFString rd = DicomReader::extractDcmTag(file.c_str(), DCM_ColorSpace);
+    _pixelData_Uint8 = DicomReader::extractPixeldataViaTag(file.c_str(), DCM_PixelData);
     
-    //_imagewidth = std::atoi(DicomReader::extractDcmTag(file.c_str(), DCM_Rows).c_str());
-   // _imageheight = std::atoi(DicomReader::extractDcmTag(file.c_str(), DCM_Columns).c_str());
-
-    std::cout << "Width: " << _imagewidth << std::endl;
-    std::cout << "Height: " << _imageheight << std::endl;
-    std::cout << "Color space: " << rd << std::endl;
+    //std::cout << "Width: " << _imagewidth << std::endl;
+   // std::cout << "Height: " << _imageheight << std::endl;
+   // std::cout << "Color space: " << rd << std::endl;
     
 }
 
@@ -53,7 +51,7 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
         controller.HandleInput(running);
 
         renderer.RenderText(text);
-        renderer.Render(_pixeldata, _imagewidth, _imageheight);
+        renderer.Render(_pixeldata, _imagewidth, _imageheight);//, text);
 
 
         frame_end = SDL_GetTicks();
@@ -70,13 +68,13 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
         if (frame_duration < target_frame_duration) {
         SDL_Delay(target_frame_duration - frame_duration);
 
-        SDL_Delay(10000);
+        SDL_Delay(5000);
         running = false;
       }
     
   }
  //TODO: uncomment and test
-  //renderer.Save("png", "/home/workspace/dicom-converter/data/export");
+  renderer.Save("png", "/home/workspace/dicom-converter/data/export");
   
 }
 
@@ -93,6 +91,8 @@ std::vector<std::string> DicomObject::formatMetaData()
     text.emplace_back(patient);
     text.emplace_back(modality);
     text.emplace_back(studydate);
+
+    std::cout << patient << std::endl;
 
     return text;
 }

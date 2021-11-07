@@ -15,7 +15,7 @@ class Renderer
              const std::size_t grid_width, const std::size_t grid_height);
     ~Renderer();
 
-    void Render(const void* image, int width, int height);
+    void Render(const void* image, int width, int height);//, std::vector<std::string> text);
     void RenderText(std::vector<std::string> text);
     void Save(std::string file_ext, std::string folder);
 

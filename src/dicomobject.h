@@ -21,6 +21,7 @@ class DicomObject
     private:
     const char* _filepath;
     const void* _pixeldata; 
+    const Uint8* _pixelData_Uint8;
     std::unique_ptr<DicomImage> _image;
     
 

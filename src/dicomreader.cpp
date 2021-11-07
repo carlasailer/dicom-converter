@@ -34,19 +34,30 @@ std::unique_ptr<DicomImage> DicomReader::getDicomImage(const char* file)
 }
 
 
-const void* DicomReader::getPixelData(DicomImage *image) 
+Uint8* DicomReader::getPixelData(DicomImage *image) 
 { 
   image->setMinMaxWindow();
   std::cout << image->getOutputDataSize(8) << std::endl;
-  //Uint8 *pixelData = (Uint8 *) image->getOutputData(8 /*bits*/, 1);
-  const void *pixelData = image->getOutputData(8 /*bits*/, 1);
+  void *pixelData = (void *) malloc(image->getOutputDataSize(8)) ;
+  int success;
+  const unsigned long buffersize{image->getOutputDataSize(8)};
+  success = image->getOutputData(pixelData, buffersize, 8 /*bits*/, 0);
+  std::cout << "GEt pixel data: " << success << std::endl;
+  //const void *pixelData = image->getOutputData(8 /*bits*/, 1);
   if (pixelData != NULL) 
   {
+    //std::cout << "Data: "<< ((Uint8*) pixelData) << std::endl;
+    std::cout << "Size of pixel data: " << sizeof(pixelData) << std::endl;
+    free(pixelData);
     std::cout << "Data: "<< pixelData << std::endl;
-    return pixelData;
+    return (Uint8*) pixelData;
   }
 
-  else  { return nullptr; }
+  else 
+  {
+    std::cout << "Pixeldata empty." << std::endl;
+    return nullptr; 
+  }
 }
      
 
@@ -86,3 +97,19 @@ OFString DicomReader::extractDcmTag(const char* file, DcmTagKey DICOMTag)
   return target;
 }
 
+const Uint8* DicomReader::extractPixeldataViaTag(const char* file, DcmTagKey DICOMTag) 
+{
+  const Uint8* target;
+  DcmFileFormat fileformat;
+  OFCondition status = fileformat.loadFile(file);
+    
+  if (status.good())
+  {
+    if (fileformat.getDataset()->findAndGetUint8Array(DICOMTag, target).good()) 
+    {
+        std::cout << "Extracted " << DICOMTag << " : " << target << std::endl;
+    }
+  }
+  
+  return target;
+}
