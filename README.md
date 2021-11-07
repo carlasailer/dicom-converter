@@ -1,6 +1,6 @@
 # dicomConverter - a simple dicomConverter that lets you view your favourite medical images! 
 The **DICOM (Digital Imaging and Communications in Medicine)** standard 
-<img src="utils/DICOMLogo.jpg" width="200" height="200" />
+<img src="utils/DICOMLogo.jpg" height="30" />
 serves to save, send and retrieve medical image data in a standardized way. Use this DICOM converter to:
 * Read a DICOM file (.dcm)
 * Display image
