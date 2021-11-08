@@ -20,6 +20,7 @@ std::unique_ptr<DicomImage> DicomReader::getDicomImage(const char* file)
         if (image->isMonochrome())
         {
           std::cout << "Load image complete. " << std::endl;
+          std::cout << "frames in getDicomImage: " << image->getNumberOfFrames() << std::endl;
           return image;
           
         }
@@ -38,17 +39,18 @@ Uint8* DicomReader::getPixelData(DicomImage *image)
 { 
   image->setMinMaxWindow();
   std::cout << image->getOutputDataSize(8) << std::endl;
-  void *pixelData = (void *) malloc(image->getOutputDataSize(8)) ;
+  //void *pixelData = (void *) malloc(image->getOutputDataSize(8)) ;
   int success;
   const unsigned long buffersize{image->getOutputDataSize(8)};
-  success = image->getOutputData(pixelData, buffersize, 8 /*bits*/, 0);
+  //success = image->getOutputData(pixelData, buffersize, 8 /*bits*/, 0);
+  std::cout << "Number of frames: " << image->getNumberOfFrames() << std::endl;
   std::cout << "GEt pixel data: " << success << std::endl;
-  //const void *pixelData = image->getOutputData(8 /*bits*/, 1);
+   void *pixelData = (Uint8*) (image->getOutputData(8 /*bits*/, 0));
   if (pixelData != NULL) 
   {
-    //std::cout << "Data: "<< ((Uint8*) pixelData) << std::endl;
+    std::cout << "Data: "<< ((Uint8*) pixelData) << std::endl;
     std::cout << "Size of pixel data: " << sizeof(pixelData) << std::endl;
-    free(pixelData);
+    //free(pixelData);
     std::cout << "Data: "<< pixelData << std::endl;
     return (Uint8*) pixelData;
   }

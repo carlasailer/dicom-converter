@@ -96,28 +96,24 @@ Renderer::~Renderer() {
 
 void Renderer::Render(const void* pixels, int width, int height)
 {  
-  SDL_Rect block;
-  block.w = screen_width / grid_width;
-  block.h = screen_height / grid_height;
+  //SDL_Rect block;
+  //block.w = screen_width / grid_width;
+  //block.h = screen_height / grid_height;
 
   SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
  
    // Render image
-  //std::cout << "Before surface" << std::endl;
-   //DL_Surface *sdl_imageSurface = SDL_CreateRGBSurface(0, width, height, 8, NULL, NULL, NULL, NULL);
   Uint32 rmask, gmask, bmask, amask;
   rmask = 0x000000ff;
   gmask = 0x0000ff00;
   bmask = 0x00ff0000;
   amask = 0xff000000;
   
-  SDL_Surface *sdl_imageSurface = SDL_CreateRGBSurfaceFrom(const_cast<void * >(pixels), width, height, 8, 3*width, NULL, NULL, NULL, NULL);
+  SDL_Surface *sdl_imageSurface = SDL_CreateRGBSurfaceFrom(const_cast<void * >(pixels), width, height, 8, width, NULL, NULL, NULL, NULL);
   if (sdl_imageSurface == NULL)
   {
     std::cout << "CreateRGBSurface failed: " << SDL_GetError() << std::endl;
   }
-
-  //std::cout << "Size of SDL SURFACE: " << sdl_imageSurface->w << ", " << sdl_imageSurface->h << std::endl;
 
   SDL_Color colors[256];
   int i;
@@ -127,7 +123,6 @@ void Renderer::Render(const void* pixels, int width, int height)
   }
   SDL_SetPaletteColors((sdl_imageSurface->format)->palette, colors, 0, 256);
 
-  //std::cout << "Surface is there! " << std::endl;
 
   SDL_Texture *sdl_texture = SDL_CreateTextureFromSurface(sdl_renderer, sdl_imageSurface);
   if (sdl_texture == NULL)
@@ -147,12 +142,6 @@ void Renderer::Render(const void* pixels, int width, int height)
   img_dest.y = (screen_height/2)- (height/2)+15;
   SDL_RenderCopy(sdl_renderer, sdl_texture, NULL, &img_dest);
    
-   // Render food
-  SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xCC, 0x00, 0xFF);
-  block.x = 5 * block.w;
-  block.y = 5 * block.h;
-  SDL_RenderFillRect(sdl_renderer, &block);
-
   // update what is seen
   SDL_RenderPresent(sdl_renderer);
 
@@ -189,8 +178,6 @@ void Renderer::RenderText(std::vector<std::string> text)
 
   TTF_CloseFont(font);
   
-  //SDL_RenderPresent(sdl_renderer);
-
   return;
 }
 

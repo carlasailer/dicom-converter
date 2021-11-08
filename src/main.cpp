@@ -19,8 +19,8 @@ int main(int argc, char** args) {
     Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
     Controller controller;
 
-    std::string file = "/home/workspace/dicom-converter/data/import/MRBRAIN.DCM";
-    //std::string file = "/home/workspace/dicom-converter/data/import/CT.dcm";
+    //std::string file = "/home/workspace/dicom-converter/data/import/MRBRAIN.DCM";
+    std::string file = "/home/workspace/dicom-converter/data/import/CT.dcm";
     DicomObject dicomObj = DicomObject(file);
     
     dicomObj.renderImage(controller, renderer, kMsPerFrame);

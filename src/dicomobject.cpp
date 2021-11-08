@@ -22,11 +22,13 @@ DicomObject::DicomObject(std::string file)
     _modality = DicomReader::extractDcmTag(file.c_str(), DCM_Modality);
     _studyDate = DicomReader::extractDcmTag(file.c_str(), DCM_StudyDate);
     OFString rd = DicomReader::extractDcmTag(file.c_str(), DCM_ColorSpace);
-    _pixelData_Uint8 = DicomReader::extractPixeldataViaTag(file.c_str(), DCM_PixelData);
+    //_pixelData_Uint8 = DicomReader::extractPixeldataViaTag(file.c_str(), DCM_PixelData);
+   // OFString photoRepr = DicomReader::extractDcmTag(file.c_str(), DCM_PhotometricInterpretation);
+   // OFString frames = DicomReader::extractDcmTag(file.c_str(), DCM_NumberOfFrames);
     
-    //std::cout << "Width: " << _imagewidth << std::endl;
-   // std::cout << "Height: " << _imageheight << std::endl;
-   // std::cout << "Color space: " << rd << std::endl;
+    //std::cout << "number of frames from tag: " << frames << std::endl;
+    std::cout << "Height: " << _imageheight << std::endl;
+    std::cout << "Width: " << _imagewidth << std::endl;
     
 }
 
@@ -50,8 +52,8 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
         // Input, Update, Render - the main game loop.
         controller.HandleInput(running);
 
-        renderer.RenderText(text);
         renderer.Render(_pixeldata, _imagewidth, _imageheight);//, text);
+        renderer.RenderText(text);
 
 
         frame_end = SDL_GetTicks();
