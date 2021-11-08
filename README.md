@@ -13,6 +13,12 @@ The **DICOM (Digital Imaging and Communications in Medicine)** standard serves t
 <p align="center">
   <img src="utils/output.png" height="400"/>
 </p>
+
+Define your own input file, decide whether you want to include metadata and whether you want to export your image:
+<p align="center">
+  <img src="utils/userinput.PNG" height="400"/>
+</p>
+
 Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
 
