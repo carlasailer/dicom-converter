@@ -35,7 +35,7 @@ void UserInput::User_getDisplayMetaData()
         display = false;
     }
     else {
-        std::cout << "Invalid input. Setting to display only. \n";
+        std::cerr << "Invalid input. Setting to display only. \n";
         display = false;
     }
 
@@ -60,11 +60,11 @@ void UserInput::User_getSave()
         save = false;
     }
     else {
-        std::cout << "Invalid input. Setting to exit without export. \n";
+        std::cerr << "Invalid input. Setting to exit without export. \n";
         save = false;
     }
     std::cout << "\n************ \n";
-    setDisplayMetaData(save);
+    setSave(save);
 
     return;
 }

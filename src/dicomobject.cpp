@@ -62,11 +62,12 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
 
         SDL_Delay(5000);
         running = false;
+        if (save == true) {
+            renderer.Save("png", "/home/workspace/dicom-converter/data/export");
+        }
+  
       }
     
-  }
-  if (save) {
-    renderer.Save("png", "/home/workspace/dicom-converter/data/export");
   }
   
 }
