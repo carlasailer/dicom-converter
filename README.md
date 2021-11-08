@@ -87,7 +87,7 @@ The following rubric points were implemented in this project:
 * _The project reads data from a file and process the data, or the program writes data to a file._
   * read contents of `.dcm` file: `namespace DicomReader` (in `src/dicomreader.cpp`, lines 11-67)
 * _The project accepts user input and processes the input._: 
-  * implemented in 'class UserInput' in 'src/userinput.cpp'
+  * implemented in `class UserInput` in `src/userinput.cpp`
 
 **Object Oriented Programming**
 * _The project uses Object Oriented Programming techniques._
