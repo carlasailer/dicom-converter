@@ -1,4 +1,4 @@
-# dicomConverter - a simple dicomConverter that lets you view your favourite medical images! 
+# DicomConverter - a simple converter that let's you view & save your favourite medical images! 
 
 The **DICOM (Digital Imaging and Communications in Medicine)** standard serves to save, send and retrieve medical image data in a standardized way. Use this DICOM converter to:
 <p align="center">
@@ -68,3 +68,33 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
 3. Compile: `cmake .. && make`
 4. Run it: `./dicomConverter`.
 
+## File and Class structure
+* `src/`  
+  * `./dicomobject.h` & `./dicomobject.cpp`:      `class DicomObject`  
+  * `./dicomreader.h` & `./dicomreader.cpp`:      `namespace DicomReader`  
+  * `./main.cpp`     
+  * `./renderer.h` & `./renderer.cpp`:            `class Renderer`  
+  * `./userinput.h` & `./userinput.cpp`:          `class UserInput`  
+* `build/`  
+* `utils/`  
+
+## Submission as part of the C++ Nanodegree
+The following rubric points were implemented in this project:
+
+**Loops, Functions, I/O**
+* _The project demonstrates an understanding of C++ functions and control structures._
+  * use of conditional control structures e.g. in `UserInput::User_getDisplayMetaData` (in `src/userinput.cpp`, lines 22-45)
+* _The project reads data from a file and process the data, or the program writes data to a file._
+  * read contents of `.dcm` file: `namespace DicomReader` (in `src/dicomreader.cpp`, lines 11-67)
+* _The project accepts user input and processes the input._: 
+  * implemented in `class UserInput` in `src/userinput.cpp`
+
+**Object Oriented Programming**
+* _The project uses Object Oriented Programming techniques._
+  * implementation of classes `class UserInput` (in `src/userinput.h`, lines 6-27), `class DicomObject` (in `src/dicomobject.h`, lines 10-32) and `class Renderer` (in `src/renderer.h`, lines 10-33)
+* _Classes use appropriate access specifiers for class members._
+  * public and private member variables of `class UserInput` (in `src/userinput.h`, lines 8-25)
+
+**Memory Management**
+* _The project uses smart pointers instead of raw pointers._
+  *  TODO
