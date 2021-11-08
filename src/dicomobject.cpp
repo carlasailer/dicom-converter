@@ -17,23 +17,12 @@ DicomObject::DicomObject(std::string file)
 
     // extract desired metadata 
     _patientName = DicomReader::extractDcmTag(file.c_str(), DCM_PatientName);
-    _patientSex = DicomReader::extractDcmTag(file.c_str(), DCM_PatientSex);
-    _patientBirthDate = DicomReader::extractDcmTag(file.c_str(), DCM_PatientBirthDate);
     _modality = DicomReader::extractDcmTag(file.c_str(), DCM_Modality);
     _studyDate = DicomReader::extractDcmTag(file.c_str(), DCM_StudyDate);
-    OFString rd = DicomReader::extractDcmTag(file.c_str(), DCM_ColorSpace);
-    //_pixelData_Uint8 = DicomReader::extractPixeldataViaTag(file.c_str(), DCM_PixelData);
-   // OFString photoRepr = DicomReader::extractDcmTag(file.c_str(), DCM_PhotometricInterpretation);
-   // OFString frames = DicomReader::extractDcmTag(file.c_str(), DCM_NumberOfFrames);
-    
-    //std::cout << "number of frames from tag: " << frames << std::endl;
-    std::cout << "Height: " << _imageheight << std::endl;
-    std::cout << "Width: " << _imagewidth << std::endl;
-    
 }
 
 
-void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::size_t target_frame_duration)
+void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::size_t target_frame_duration, bool renderMetaData, bool save)
 {
     Uint32 title_timestamp = SDL_GetTicks();
     Uint32 frame_start;
@@ -53,9 +42,10 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
         controller.HandleInput(running);
 
         renderer.Render(_pixeldata, _imagewidth, _imageheight);//, text);
-        renderer.RenderText(text);
-
-
+        if (renderMetaData) {
+            renderer.RenderText(text);
+        } 
+    
         frame_end = SDL_GetTicks();
 
         // Keep track of how long each loop through the input/update/render cycle
@@ -75,8 +65,9 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
       }
     
   }
- //TODO: uncomment and test
-  renderer.Save("png", "/home/workspace/dicom-converter/data/export");
+  if (save) {
+    renderer.Save("png", "/home/workspace/dicom-converter/data/export");
+  }
   
 }
 
@@ -95,8 +86,6 @@ std::vector<std::string> DicomObject::formatMetaData()
     text.emplace_back(patient);
     text.emplace_back(modality);
     text.emplace_back(studydate);
-
-    std::cout << _studyDate << std::endl;
 
     return text;
 }

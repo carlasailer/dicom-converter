@@ -258,6 +258,33 @@ src/renderer.cpp.s:
 	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/renderer.cpp.s
 .PHONY : src/renderer.cpp.s
 
+src/userinput.o: src/userinput.cpp.o
+
+.PHONY : src/userinput.o
+
+# target to build an object file
+src/userinput.cpp.o:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/userinput.cpp.o
+.PHONY : src/userinput.cpp.o
+
+src/userinput.i: src/userinput.cpp.i
+
+.PHONY : src/userinput.i
+
+# target to preprocess a source file
+src/userinput.cpp.i:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/userinput.cpp.i
+.PHONY : src/userinput.cpp.i
+
+src/userinput.s: src/userinput.cpp.s
+
+.PHONY : src/userinput.s
+
+# target to generate assembly for a file
+src/userinput.cpp.s:
+	$(MAKE) -f CMakeFiles/dicomConverter.dir/build.make CMakeFiles/dicomConverter.dir/src/userinput.cpp.s
+.PHONY : src/userinput.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... src/renderer.o"
 	@echo "... src/renderer.i"
 	@echo "... src/renderer.s"
+	@echo "... src/userinput.o"
+	@echo "... src/userinput.i"
+	@echo "... src/userinput.s"
 .PHONY : help
 
 

@@ -21,16 +21,13 @@ std::string convertTimestampToString(time_t rawtime)
 
 std::string getFilenameWithTimestamp(std::string file_ext, std::string location)
 {   
-    
     std::string filename = "";
          
     auto timestamp = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     std::string timestring = convertTimestampToString(timestamp);
-    std::cout << timestring << std::endl;
-
+ 
     filename = location + "/" + timestring + "." + file_ext;
-    std::cout << filename << std::endl;
-
+  
     return filename;
 }
 
@@ -71,22 +68,13 @@ Renderer::Renderer(const std::size_t screen_width,
     std::cerr << "SDL_Error: " << SDL_GetError() << "\n";
   }
 
-  // Create texture
-  //sdl_texture = NULL;
-
 }
 
 Renderer::~Renderer() {
-  // close the window and perform a clean exit of SDL
-  //SDL_FreeSurface();
-  // = NULL;
- 
+  // close the window and perform a clean exit of SDL and TTF
   SDL_DestroyRenderer(sdl_renderer);
   sdl_renderer = NULL;
   
-  //SDL_DestroyTexture();
-  //sdl_texture = NULL;
-
   SDL_DestroyWindow(sdl_window);
   sdl_window = NULL;
 
@@ -96,12 +84,6 @@ Renderer::~Renderer() {
 
 void Renderer::Render(const void* pixels, int width, int height)
 {  
-  //SDL_Rect block;
-  //block.w = screen_width / grid_width;
-  //block.h = screen_height / grid_height;
-
-  SDL_SetRenderDrawColor(sdl_renderer, 0x1E, 0x1E, 0x1E, 0xFF);
- 
    // Render image
   Uint32 rmask, gmask, bmask, amask;
   rmask = 0x000000ff;
@@ -187,5 +169,7 @@ void Renderer::Save(std::string file_ext, std::string folder)
   sdl_winSurface = SDL_GetWindowSurface(sdl_window);
   SDL_RenderReadPixels(sdl_renderer, NULL, SDL_PIXELFORMAT_ARGB8888, sdl_winSurface->pixels, sdl_winSurface->pitch);
   SDL_SaveBMP(sdl_winSurface, filename.c_str());
+
+  std::cout << "Exported to " << filename << std::endl;
   return;
 }

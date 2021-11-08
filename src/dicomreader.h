@@ -16,8 +16,7 @@ namespace DicomReader
     std::unique_ptr<DicomImage> getDicomImage(const char* file);
     Uint8* getPixelData(DicomImage *image);
     OFString extractDcmTag(const char* file, DcmTagKey DICOMTag);
-    const Uint8* extractPixeldataViaTag(const char* file, DcmTagKey DICOMTag);
-    template<typename TargetType> TargetType extractDcmTag(const char* file, DcmTagKey DICOMTag);
+   // extractDcmTagTemplate(const char* file, DcmTagKey DICOMTag)
 
 }; // namespace DICOMReader
 

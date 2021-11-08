@@ -31,6 +31,6 @@ INCLUDE_DIRECTORIES(${SDL2_ttf_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES("/usr/lib/x86_64-linux-gnu/**")
 
 # declare executable and link required libraries
-ADD_EXECUTABLE(dicomConverter src/main.cpp src/dicomobject.cpp src/dicomreader.cpp src/renderer.cpp src/controller.cpp)
+ADD_EXECUTABLE(dicomConverter src/main.cpp src/dicomobject.cpp src/dicomreader.cpp src/renderer.cpp src/controller.cpp src/userinput.cpp)
 #string(STRIP ${SDL2_LIBRARIES} SDL2_LIBRARIES)
 TARGET_LINK_LIBRARIES(dicomConverter ${DCMTK_LIBRARIES} ${SDL2_LIBRARIES} SDL2::Main SDL2::TTF)

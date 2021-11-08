@@ -475,7 +475,11 @@ CMakeFiles/dicomConverter.dir/src/main.cpp.o: ../src/dicomobject.h
 CMakeFiles/dicomConverter.dir/src/main.cpp.o: ../src/dicomreader.h
 CMakeFiles/dicomConverter.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/dicomConverter.dir/src/main.cpp.o: ../src/renderer.h
+CMakeFiles/dicomConverter.dir/src/main.cpp.o: ../src/userinput.h
 
 CMakeFiles/dicomConverter.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/dicomConverter.dir/src/renderer.cpp.o: ../src/renderer.h
+
+CMakeFiles/dicomConverter.dir/src/userinput.cpp.o: ../src/userinput.cpp
+CMakeFiles/dicomConverter.dir/src/userinput.cpp.o: ../src/userinput.h
 

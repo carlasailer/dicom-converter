@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/workspace/dicom-converter/src/dicomreader.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o"
   "/home/workspace/dicom-converter/src/main.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/main.cpp.o"
   "/home/workspace/dicom-converter/src/renderer.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/renderer.cpp.o"
+  "/home/workspace/dicom-converter/src/userinput.cpp" "/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir/src/userinput.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

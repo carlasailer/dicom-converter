@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dicomConverter.dir/src/dicomreader.cpp.o"
   "CMakeFiles/dicomConverter.dir/src/renderer.cpp.o"
   "CMakeFiles/dicomConverter.dir/src/controller.cpp.o"
+  "CMakeFiles/dicomConverter.dir/src/userinput.cpp.o"
   "dicomConverter.pdb"
   "dicomConverter"
 )

@@ -10,12 +10,11 @@
 class Renderer 
 {
  public:
-    //Renderer();
     Renderer(const std::size_t screen_width, const std::size_t screen_height,
              const std::size_t grid_width, const std::size_t grid_height);
     ~Renderer();
 
-    void Render(const void* image, int width, int height);//, std::vector<std::string> text);
+    void Render(const void* image, int width, int height);
     void RenderText(std::vector<std::string> text);
     void Save(std::string file_ext, std::string folder);
 
@@ -30,8 +29,6 @@ class Renderer
     const std::size_t screen_height;
     const std::size_t grid_width;
     const std::size_t grid_height;
-
-
 
 };
 

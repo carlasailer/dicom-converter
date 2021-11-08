@@ -7,8 +7,8 @@ The **DICOM (Digital Imaging and Communications in Medicine)** standard serves t
  
 * Read a DICOM file (.dcm)
 * Display the image (e.g. CT, MRT, PET)
-* Display meta information such as patient name, study data, or modality
-* Export image as .png
+* Display meta information such as patient name, study data, or modality (optional)
+* Export image as .png (optional)
 
 <p align="center">
   <img src="utils/output.png" height="400"/>

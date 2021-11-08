@@ -476,6 +476,10 @@ CMakeFiles/dicomConverter.dir/src/main.cpp.o
  /home/workspace/dicom-converter/src/dicomreader.h
  /home/workspace/dicom-converter/src/main.cpp
  /home/workspace/dicom-converter/src/renderer.h
+ /home/workspace/dicom-converter/src/userinput.h
 CMakeFiles/dicomConverter.dir/src/renderer.cpp.o
  /home/workspace/dicom-converter/src/renderer.cpp
  /home/workspace/dicom-converter/src/renderer.h
+CMakeFiles/dicomConverter.dir/src/userinput.cpp.o
+ /home/workspace/dicom-converter/src/userinput.cpp
+ /home/workspace/dicom-converter/src/userinput.h
