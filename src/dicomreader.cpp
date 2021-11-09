@@ -33,10 +33,10 @@ std::unique_ptr<DicomImage> DicomReader::getDicomImage(const char* file)
 }
 
 
-Uint8* DicomReader::getPixelData(DicomImage *image) 
+Uint8* DicomReader::getPixelData(DicomImage &image) 
 { 
-  image->setMinMaxWindow();
-  void *pixelData = (Uint8*) (image->getOutputData(8 /*bits*/, 0));
+  image.setMinMaxWindow();
+  void *pixelData = (Uint8*) (image.getOutputData(8 /*bits*/, 0));
   if (pixelData != NULL) 
   {
     return (Uint8*) pixelData;
@@ -65,4 +65,3 @@ OFString DicomReader::extractDcmTag(const char* file, DcmTagKey DICOMTag)
 
   return target;
 }
-

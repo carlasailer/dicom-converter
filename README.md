@@ -18,6 +18,7 @@ Define your own input file, decide whether you want to include metadata and whet
 <p align="center">
   <img src="utils/userinput.PNG" height="400"/>
 </p>
+Follow the instructions on the command line and view the DICOM image in a pop-up window. The file will then optionally be exported when closing the window. 
 
 Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
 
@@ -40,6 +41,7 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
   * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
   >Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source. 
 * SDL_ttf
+  * All installation instructions can be found [here](https://www.libsdl.org/projects/SDL_ttf/)
   * On Linux, use `sudo apt-get install libsdl2-ttf-dev`
   
 ## Build DCMTIK - DICOM Toolkit 
@@ -70,20 +72,27 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
 
 ## File and Class structure
 * `src/`  
+  * `./main.cpp` 
+  * `./dicomreader.h` & `./dicomreader.cpp`:      `namespace DicomReader`   
   * `./dicomobject.h` & `./dicomobject.cpp`:      `class DicomObject`  
-  * `./dicomreader.h` & `./dicomreader.cpp`:      `namespace DicomReader`  
-  * `./main.cpp`     
+  * `./controller.h` & `.controller.cpp`:         `class Controller`
   * `./renderer.h` & `./renderer.cpp`:            `class Renderer`  
   * `./userinput.h` & `./userinput.cpp`:          `class UserInput`  
-* `build/`  
 * `utils/`  
+  * `.FindSLD2.cmake`: needed for CMAKE to find the correct location of installed SDL2
+  * `.FindSDL2.cmake`: needed for CMAKE to find the correct location of installed SDL2-ttf
+  * `arial.ttf`: font used to render text on the image
+* `data/` 
+  * `./export/`: target folder for saved images
+  * `./import/`: example data provided for testing purposes
 
 ## Submission as part of the C++ Nanodegree
 The following rubric points were implemented in this project:
 
 **Loops, Functions, I/O**
 * _The project demonstrates an understanding of C++ functions and control structures._
-  * use of conditional control structures e.g. in `UserInput::User_getDisplayMetaData` (in `src/userinput.cpp`, lines 22-45)
+  * use of conditional control structures, e.g. in `UserInput::User_getDisplayMetaData` (in `src/userinput.cpp`, lines 22-45)
+  * modular organization in functions, e.g. in `convertTimeStampToString` and `getFilenameWithTimestamp` (`renderer.cpp`, lines 7-32)
 * _The project reads data from a file and process the data, or the program writes data to a file._
   * read contents of `.dcm` file: `namespace DicomReader` (in `src/dicomreader.cpp`, lines 11-67)
 * _The project accepts user input and processes the input._: 
@@ -94,7 +103,13 @@ The following rubric points were implemented in this project:
   * implementation of classes `class UserInput` (in `src/userinput.h`, lines 6-27), `class DicomObject` (in `src/dicomobject.h`, lines 10-32) and `class Renderer` (in `src/renderer.h`, lines 10-33)
 * _Classes use appropriate access specifiers for class members._
   * public and private member variables of `class UserInput` (in `src/userinput.h`, lines 8-25)
+* _Classes encapsulate behavior._
+  * implementation of classes `class UserInput` (in `src/userinput.h`, lines 6-27), `class DicomObject` (in `src/dicomobject.h`, lines 10-32) and `class Renderer` (in `src/renderer.h`, lines 10-33)
 
 **Memory Management**
-* _The project uses smart pointers instead of raw pointers._
-  *  TODO
+* _The project makes use of references in function declarations._
+  * Two functions use pass-by-reference: `DicomObject::renderImage` and `DicomReader::getPixelData`
+* _The project follows the Rule of 5._
+  * implemented for `class Renderer` in `src/renderer.h`
+* _The project uses move semantics to move data, instead of copying it, where possible._ 
+  * use of move constructor in `src/main.cpp` line 31

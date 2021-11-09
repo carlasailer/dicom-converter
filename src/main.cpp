@@ -1,6 +1,7 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <thread>
 
 #include "dicomobject.h"
 #include "renderer.h"
@@ -26,16 +27,16 @@ int main(int argc, char** args) {
     bool metadata = userInput.getDisplayMeta();
     bool save = userInput.getSave();
     
-    // read and render data
-    Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
+    // read and render data 
+    Renderer renderer = Renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
     Controller controller;
 
     //std::string file = "/home/workspace/dicom-converter/data/import/MRBRAIN.DCM";
    // std::string file = "/home/workspace/dicom-converter/data/import/CT.dcm";
     
-
     DicomObject dicomObj = DicomObject(file);
-    
+
+    //std::thread t = std::thread(&DicomObject::renderImage, &dicomObj, controller, renderer, kMsPerFrame, metadata, save)
     dicomObj.renderImage(controller, renderer, kMsPerFrame, metadata, save);
     std::cout << "DICOM Converter was closed." << std::endl;
     return 0;

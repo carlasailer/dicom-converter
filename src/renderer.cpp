@@ -31,6 +31,7 @@ std::string getFilenameWithTimestamp(std::string file_ext, std::string location)
     return filename;
 }
 
+// overloaded constructor
 Renderer::Renderer(const std::size_t screen_width,
                    const std::size_t screen_height,
                    const std::size_t grid_width, const std::size_t grid_height)
@@ -60,7 +61,7 @@ Renderer::Renderer(const std::size_t screen_width,
     std::cerr << "Window could not be created.\n";
     std::cerr << " SDL_Error: " << SDL_GetError() << "\n";
   }
-
+  
   // Create renderer
   sdl_renderer = SDL_CreateRenderer(sdl_window, -1, SDL_RENDERER_ACCELERATED);
   if (nullptr == sdl_renderer) {
@@ -70,7 +71,18 @@ Renderer::Renderer(const std::size_t screen_width,
 
 }
 
-Renderer::~Renderer() {
+// default constructor
+Renderer::Renderer() 
+{
+  screen_width = 750;
+  screen_height = 750;
+  grid_width = 32;
+  grid_height = 32;
+}
+
+// destructor
+Renderer::~Renderer() 
+{
   // close the window and perform a clean exit of SDL and TTF
   SDL_DestroyRenderer(sdl_renderer);
   sdl_renderer = NULL;
@@ -82,6 +94,45 @@ Renderer::~Renderer() {
   TTF_Quit();
 }
 
+// copy constructor
+Renderer::Renderer(const Renderer &source)
+{
+  sdl_window = source.sdl_window;
+  sdl_renderer = source.sdl_renderer;
+}
+
+// copy assignment operator
+Renderer &Renderer::operator=(const Renderer &source)
+{
+ if (this == &source) { 
+    return *this; }
+
+ sdl_window = source.sdl_window;
+ sdl_renderer = source.sdl_renderer;
+
+}
+
+// move constructor
+Renderer::Renderer(Renderer &&source)
+{
+  sdl_window = source.sdl_window;
+  sdl_renderer = source.sdl_renderer;
+  source.sdl_window = nullptr;
+  source.sdl_renderer = nullptr;
+}
+// move assignment operator
+Renderer &Renderer::operator=(Renderer &&source)
+{
+ if (this == &source) { 
+    return *this; }
+  
+  sdl_window = source.sdl_window;
+  sdl_renderer = source.sdl_renderer;
+  source.sdl_window = nullptr;
+  source.sdl_renderer = nullptr;
+
+  return *this;
+}
 void Renderer::Render(const void* pixels, int width, int height)
 {  
    // Render image
