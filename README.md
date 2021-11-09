@@ -18,10 +18,10 @@ Define your own input file, decide whether you want to include metadata and whet
 <p align="center">
   <img src="utils/userinput.PNG" height="400"/>
 </p>
+
 Follow the instructions on the command line and view the DICOM image in a pop-up window. The file will then optionally be exported when closing the window. 
 
-Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213).
-
+_Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213)._
 
 ## Dependencies for Running Locally
 
