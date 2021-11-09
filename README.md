@@ -61,7 +61,7 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
 * `chmod +x /home/workspace/dicom-converter/install-dcmtk.sh`
 * `./home/workspcae/dicom-converter/install-dcmtk.sh`
 
-4. Ensure that the DCMDICTPATH environment variable is set correctly (points to ".../dcmdata/data/dicom.dic" file). 
+4. Ensure that the `DCMDICTPATH` environment variable is set correctly (points to `.../dcmdata/data/dicom.dic` file). 
 
 ## Build this project
 
