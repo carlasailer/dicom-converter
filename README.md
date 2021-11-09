@@ -23,7 +23,7 @@ Follow the instructions on the command line and view the DICOM image in a pop-up
 
 Sample images to test the application were taken from [National Biomedical Imaging Archive](https://imaging.nci.nih.gov/ncia/) and [Rubo Medical Imaging](http://www.rubomedical.com/dicom_files/index.html).
 
-_Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213)._
+_Note: This project was developed as final capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The repo [CppND-Capstone-Snake-Game](https://github.com/udacity/CppND-Capstone-Snake-Game) served as a starting point._
 
 ## Dependencies for Running Locally
 
