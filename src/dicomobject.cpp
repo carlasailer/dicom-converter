@@ -17,8 +17,11 @@ DicomObject::DicomObject(std::string file)
 
     // extract desired metadata 
     _metadata = std::unordered_map<std::string, OFString> {
+         // (0010,0010) --> DCM_PatientName
         {"Patient name", DicomReader::extractDcmTag(file.c_str(), DCM_PatientName)},
-        {"Modality", DicomReader::extractDcmTag(file.c_str(), DCM_Modality)},
+         // (0008,0060) --> DCM_Modality
+        {"Modality", DicomReader::extractDcmTag(file.c_str(), DCM_Modality)}, 
+         // (0008,0020) --> DCM_StudyDate 
         {"Study date", DicomReader::extractDcmTag(file.c_str(), DCM_StudyDate)}
     };
 }

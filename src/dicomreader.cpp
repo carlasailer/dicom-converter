@@ -49,6 +49,7 @@ Uint8* DicomReader::getPixelData(DicomImage &image)
   }
 }
      
+     
 OFString DicomReader::extractDcmTag(const char* file, DcmTagKey DICOMTag) 
 {
   OFString target;

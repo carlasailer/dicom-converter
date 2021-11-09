@@ -9,7 +9,6 @@
 #include "userinput.h"
 
 int main(int argc, char** args) {
-
     constexpr std::size_t kFramesPerSecond{60};
     constexpr std::size_t kMsPerFrame{1000 / kFramesPerSecond};
     constexpr std::size_t kScreenWidth{700};
@@ -30,14 +29,11 @@ int main(int argc, char** args) {
     // read and render data 
     Renderer renderer = Renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
     Controller controller;
-
-    //std::string file = "/home/workspace/dicom-converter/data/import/MRBRAIN.DCM";
-   // std::string file = "/home/workspace/dicom-converter/data/import/CT.dcm";
-    
     DicomObject dicomObj = DicomObject(file);
 
-    //std::thread t = std::thread(&DicomObject::renderImage, &dicomObj, controller, renderer, kMsPerFrame, metadata, save)
     dicomObj.renderImage(controller, renderer, kMsPerFrame, metadata, save);
+    
     std::cout << "DICOM Converter was closed." << std::endl;
+    
     return 0;
 }

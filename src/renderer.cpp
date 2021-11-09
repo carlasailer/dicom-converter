@@ -120,6 +120,7 @@ Renderer::Renderer(Renderer &&source)
   source.sdl_window = nullptr;
   source.sdl_renderer = nullptr;
 }
+
 // move assignment operator
 Renderer &Renderer::operator=(Renderer &&source)
 {
@@ -133,6 +134,7 @@ Renderer &Renderer::operator=(Renderer &&source)
 
   return *this;
 }
+
 void Renderer::Render(const void* pixels, int width, int height)
 {  
    // Render image

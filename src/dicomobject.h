@@ -23,13 +23,9 @@ class DicomObject
     std::unique_ptr<DicomImage> _image;
     
     private:
-    std::unordered_map<std::string, OFString> _metadata;
-    //OFString _patientName{""};   //  (0010,0010) --> DCM_PatientName
-    //OFString _modality{""};      //  (0008,0060) --> DCM_Modality
-    //OFString _studyDate{""};     //  (0008,0020) --> DCM_StudyDate 
+    std::unordered_map<std::string, OFString> _metadata; 
     int _imagewidth;
     int _imageheight;
-   
 };
 
 #endif
