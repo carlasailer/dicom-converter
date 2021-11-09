@@ -65,7 +65,7 @@ Note: This project was developed as final capstone project in the [Udacity C++ N
 
 ## Build this project
 
-1. Clone this repo.
+1. Clone this repo from [github.com/carlasailer/dicom-converter](https://github.com/carlasailer/dicom-converter).
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./dicomConverter`.
