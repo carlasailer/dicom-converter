@@ -64,5 +64,6 @@
         "set": "cpp",
         "string": "cpp",
         "codecvt": "cpp"
-    }
+    },
+    "git.ignoreLimitWarning": true
 }

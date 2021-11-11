@@ -1,3 +1,0 @@
-/home/workspace/dicom-converter/build/CMakeFiles/rebuild_cache.dir
-/home/workspace/dicom-converter/build/CMakeFiles/dicomConverter.dir
-/home/workspace/dicom-converter/build/CMakeFiles/edit_cache.dir

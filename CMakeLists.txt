@@ -9,7 +9,7 @@ set(DCMTK_DIR "/home/workspace/dcmtk-3.6.6")
 project(dicomConverter)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/" "/home/workspace/dicom-converter/utils/")
-
+set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/utils/)
 # specify DCMTK's (default) installation directory
 SET(DCMTK_DIRECTORY "/home/workspace/dcmtk-3.6.6/dcmtk-3.6.6-install" CACHE PATH "Directory where DCMTK library is installed.")
 SET(DCMDICTPATH /home/workspace/dcmtk-3.6.6/dcmdata/data/dicom.dic)
