@@ -6,10 +6,10 @@ void UserInput::User_getFilename()
 {
     std::string input;
     std::cout << "\n*** Location of DICOM File to be read *** \n";
-    std::cout << "Press enter to use the default location(/home/workspace/dicom-converter/data/import/CT.dcm) or enter a custom location:\n";
+    std::cout << "Press enter to use the default location (dicom-converter/data/import/CT.dcm) or enter a custom location:\n";
     std::getline(std::cin, input);
     if (input.length() == 0) {
-        input = "/home/workspace/dicom-converter/data/import/CT.dcm";
+        input = "../data/import/CT.dcm";
     }
     
     std::cout << "   Selected file: " << input << std::endl;

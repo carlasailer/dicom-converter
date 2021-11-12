@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Directories
+build/
+dcmtk-3.6.6/
+
+# Compressed archives
+*.tar
+*.gz

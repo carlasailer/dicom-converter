@@ -72,6 +72,12 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
 3. Compile: `cmake .. && make`
 4. Run it: `./dicomConverter`.
 
+## Build this project in a Udacity workspace (project submission)
+
+1. Extract the `dcmtk-3.6.6.tar.gz` that is provided in the workspace.
+2. Install `sdl2-ttf` as described above.
+3. Compile and run the code.
+
 ## File and Class structure
 * `src/`  
   * `./main.cpp` 

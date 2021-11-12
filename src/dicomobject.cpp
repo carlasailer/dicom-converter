@@ -71,7 +71,7 @@ void DicomObject::renderImage(Controller &controller, Renderer &renderer, std::s
     
     }
     if (save == true) {
-        renderer.Save("png", "/home/workspace/dicom-converter/data/export");
+        renderer.Save("png", "data/export");
     }
   
 }
