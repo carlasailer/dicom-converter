@@ -55,7 +55,7 @@ Ensure that all necessary dependencies are installed. Then follow these instruct
 git clone https://github.com/carlasailer/dicom-converter.git
 cd dicom-converter
 
-# Build using the build script (downloads and builds dcmtk correctly)
+# Build using the build script (incl. download and build of dcmtk when executed the first time)
 chmod +x utils/build-dicom-converter.sh
 . utils/build-dicom-converter.sh
 
