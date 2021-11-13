@@ -30,6 +30,8 @@ std::unique_ptr<DicomImage> DicomReader::getDicomImage(const char* file)
       std::cerr << "Error: cannot load DICOM image (" << DicomImage::getString(image->getStatus()) << ")" << std::endl;
       return nullptr;
     }
+
+    return nullptr;
 }
 
 

@@ -34,6 +34,7 @@
 # Directories
 build/
 dcmtk-3.6.6/
+data/export/
 
 # Compressed archives
 *.tar

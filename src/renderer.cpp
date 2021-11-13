@@ -110,6 +110,8 @@ Renderer &Renderer::operator=(const Renderer &source)
  sdl_window = source.sdl_window;
  sdl_renderer = source.sdl_renderer;
 
+ return *this;
+
 }
 
 // move constructor
@@ -191,16 +193,16 @@ void Renderer::RenderText(std::vector<std::string> text)
   SDL_Texture* texture_text;
   
 
-  font = TTF_OpenFont("/home/workspace/dicom-converter/utils/arial.ttf", 15);
+  font = TTF_OpenFont("../utils/arial.ttf", 15);
   if (!font) {
-    std::cerr << "TTF_OpenFont failed: " << TTF_GetError();
+    std::cerr << "\nTTF_OpenFont failed: " << TTF_GetError() << std::endl;
   }
   
   for (int i = 0; i < text.size(); i++) 
   {
     surface_text = TTF_RenderText_Solid(font, text[i].c_str(), color);
     if (!surface_text) {
-      std::cerr << "Failed to render text: " << TTF_GetError() << std::endl;
+      std::cerr << "\nFailed to render text: " << TTF_GetError() << std::endl;
     }
 
     SDL_Rect dest = {0, 16*i, surface_text->w, surface_text->h};
