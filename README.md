@@ -52,7 +52,7 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
 ## Build instructions
 ```sh
 # Clone this repo
-git clone https://gitlab.com/carlasailer/dicom-converter.git
+git clone https://github.com/carlasailer/dicom-converter.git
 cd dicom-converter
 
 # Build using the build script (downloads and builds dcmtk correctly)
