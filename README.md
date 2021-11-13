@@ -49,7 +49,7 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
 
 
 ## Build instructions
-Ensure that all necessary dependencies are installed. Then follow these instructions:
+Ensure that all necessary dependencies except `dcmtk` are already installed. Then follow these instructions:
 ```sh
 # Clone this repo
 git clone https://github.com/carlasailer/dicom-converter.git
