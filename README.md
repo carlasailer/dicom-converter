@@ -46,37 +46,20 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
   * All installation instructions can be found [here](https://www.libsdl.org/projects/SDL_ttf/)
   * On Linux, use `sudo apt-get install libsdl2-ttf-dev`
   
-## Build DCMTIK - DICOM Toolkit 
+## Build instructions
+```sh
+# Clone this repo
+git clone https://gitlab.com/carlasailer/dicom-converter.git
+cd dicom-converter
 
-1. Download `dcmtk` from  [DCMTK - DICOM Toolkit](https://dicom.offis.de/dcmtk.php.en)
+# Build using the build script (downloads and builds dcmtk correctly)
+chmod +x utils/build-dicom-converter.sh
+. utils/build-dicom-converter.sh
 
-2. Extract the files to your workspace folder
-
-3. Build `dcmtk` in your workspace folder 
-* `mkdir dcmtk-3.6.6-build`
-* `cd dcmtk-3.6.6-build`
-* `cmake ..`
-* `make DESTDIR=../dcmtk-3.6.6-install install`
-
-3. Alternatively, use the install script:
-* Open a bash terminal
-* `chmod +x /home/workspace/dicom-converter/install-dcmtk.sh`
-* `./home/workspcae/dicom-converter/install-dcmtk.sh`
-
-4. Ensure that the `DCMDICTPATH` environment variable is set correctly (points to `.../dcmdata/data/dicom.dic` file). 
-
-## Build this project
-
-1. Clone this repo from [github.com/carlasailer/dicom-converter](https://github.com/carlasailer/dicom-converter).
-2. Make a build directory in the top level directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make`
-4. Run it: `./dicomConverter`.
-
-## Build this project in a Udacity workspace (project submission)
-
-1. Extract the `dcmtk-3.6.6.tar.gz` that is provided in the workspace.
-2. Install `sdl2-ttf` as described above.
-3. Compile and run the code.
+# Run
+cd ..
+./dicom-converter
+```
 
 ## File and Class structure
 * `src/`  
@@ -86,9 +69,11 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
   * `./controller.h` & `.controller.cpp`:         `class Controller`
   * `./renderer.h` & `./renderer.cpp`:            `class Renderer`  
   * `./userinput.h` & `./userinput.cpp`:          `class UserInput`  
+* `cmake/`
+  * `./sdl2`: contains `FindSLD2.cmake` and `FindSDL2_ttf.cmake` needed for CMake
+  * `/dcmtk`: contains files needed by CMake to setup `dcmtk`
 * `utils/`  
-  * `.FindSLD2.cmake`: needed for CMAKE to find the correct location of installed SDL2
-  * `.FindSDL2.cmake`: needed for CMAKE to find the correct location of installed SDL2-ttf
+  * `build-dicom-converter.sh`: downloades DICOM Toolkit `dcmtk` and builds it locally, calls `cmake` and `make` on the repo
   * `arial.ttf`: font used to render text on the image
 * `data/` 
   * `./export/`: target folder for saved images
