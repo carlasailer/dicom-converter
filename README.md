@@ -49,6 +49,7 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
 
 
 ## Build instructions
+Ensure that all necessary dependencies are installed. Then follow these instructions:
 ```sh
 # Clone this repo
 git clone https://github.com/carlasailer/dicom-converter.git
@@ -61,6 +62,9 @@ chmod +x utils/build-dicom-converter.sh
 # Run
 ./dicom-converter
 ```
+
+It is highly recommended to use the `build-dicom-converter.sh` script to ensure that all necessary environment variables are set correctly. When running the script for the first time, `dcmtk-3.6.6` will be downloaded and built locally. If the 
+
 
 ## File and Class structure
 * `src/`  
