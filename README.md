@@ -27,6 +27,7 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
 
 ## Dependencies for Running Locally
 
+* [git](https://git-scm.com/)
 * cmake >= 3.7
   * All OSes: [click here for installation instructions](https://cmake.org/install/)
 * make >= 4.1 (Linux, Mac), 3.81 (Windows)
@@ -37,15 +38,17 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
   * Linux: gcc / g++ is installed by default on most Linux distros
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
-* dcmtk == 3.6.6 (DICOM Toolkit)
-  * See build instructions below if not already installed
-* SDL2 >= 2.0
-  * All installation instructions can be found [here](https://wiki.libsdl.org/Installation)
-  >Note that for Linux, an `apt` or `apt-get` installation is preferred to building from source. 
-* SDL_ttf
-  * All installation instructions can be found [here](https://www.libsdl.org/projects/SDL_ttf/)
-  * On Linux, use `sudo apt-get install libsdl2-ttf-dev`
+* [dcmtk (DICOM Toolkit)](https://dicom.offis.de/dcmtk.php.de) == 3.6.6
+  * will be installed with first build of repo code
+* [SDL2](https://wiki.libsdl.org/Installation) >= 2.0
+* [SDL_ttf](https://www.libsdl.org/projects/SDL_ttf/)
+
   
+**On Debian/Ubuntu based systems, use the following command**
+
+`sudo apt install git build-essential pkg-config cmake cmake-data libsdl2-dev libsdl2-ttf-dev`
+
+
 ## Build instructions
 ```sh
 # Clone this repo
