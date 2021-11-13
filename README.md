@@ -28,8 +28,7 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
 ## Dependencies for Running Locally
 
 * [git](https://git-scm.com/)
-* cmake >= 3.7
-  * All OSes: [click here for installation instructions](https://cmake.org/install/)
+* [cmake](https://cmake.org/install/) >= 3.7
 * make >= 4.1 (Linux, Mac), 3.81 (Windows)
   * Linux: make is installed by default on most Linux distros
   * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
@@ -41,7 +40,7 @@ _Note: This project was developed as final capstone project in the [Udacity C++ 
 * [dcmtk (DICOM Toolkit)](https://dicom.offis.de/dcmtk.php.de) == 3.6.6
   * will be installed with first build of repo code
 * [SDL2](https://wiki.libsdl.org/Installation) >= 2.0
-* [SDL_ttf](https://www.libsdl.org/projects/SDL_ttf/)
+* [SDL2_ttf](https://www.libsdl.org/projects/SDL_ttf/)
 
   
 **On Debian/Ubuntu based systems, use the following command**
