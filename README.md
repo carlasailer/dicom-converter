@@ -60,7 +60,6 @@ chmod +x utils/build-dicom-converter.sh
 . utils/build-dicom-converter.sh
 
 # Run
-cd ..
 ./dicom-converter
 ```
 
