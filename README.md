@@ -72,10 +72,10 @@ chmod +x utils/build-dicom-converter.sh
   * `./userinput.h` & `./userinput.cpp`:          `class UserInput`  
 * `cmake/`
   * `./sdl2`: contains `FindSLD2.cmake` and `FindSDL2_ttf.cmake` needed for CMake
-  * `/dcmtk`: contains files needed by CMake to setup `dcmtk`
+  * `./dcmtk`: contains files needed by CMake to setup `dcmtk`
 * `utils/`  
-  * `build-dicom-converter.sh`: downloades DICOM Toolkit `dcmtk` and builds it locally, calls `cmake` and `make` on the repo
-  * `arial.ttf`: font used to render text on the image
+  * `./build-dicom-converter.sh`: downloades DICOM Toolkit `dcmtk` and builds it locally, calls `cmake` and `make` on the repo
+  * `./arial.ttf`: font used to render text on the image
 * `data/` 
   * `./export/`: target folder for saved images
   * `./import/`: example data provided for testing purposes
