@@ -61,6 +61,16 @@ Renderer::Renderer(const std::size_t screen_width,
     std::cerr << "Window could not be created.\n";
     std::cerr << " SDL_Error: " << SDL_GetError() << "\n";
   }
+
+  // Initialize SDL_image with png loading
+  int imgFlags = IMG_INIT_PNG;
+  if( !( IMG_Init( imgFlags ) & imgFlags ) ) {
+    std::cerr << "SDL_image could not initialize! SDL_image Error: " << IMG_GetError() << std::endl;
+  }
+
+  // Create window icon
+  sdl_icon = IMG_Load(icon_path.c_str());
+  SDL_SetWindowIcon(sdl_window, sdl_icon);
   
   // Create renderer
   sdl_renderer = SDL_CreateRenderer(sdl_window, -1, SDL_RENDERER_ACCELERATED);
@@ -84,6 +94,9 @@ Renderer::Renderer()
 Renderer::~Renderer() 
 {
   // close the window and perform a clean exit of SDL and TTF
+  SDL_FreeSurface(sdl_icon);
+  sdl_icon = NULL;
+
   SDL_DestroyRenderer(sdl_renderer);
   sdl_renderer = NULL;
   
@@ -92,6 +105,7 @@ Renderer::~Renderer()
 
   SDL_Quit();
   TTF_Quit();
+  IMG_Quit();
 }
 
 // copy constructor
